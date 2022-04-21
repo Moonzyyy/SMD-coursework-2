@@ -55,4 +55,47 @@ events
 		@act3: staff ≔ staff ∪ {user}
 		@act4: loggedout ≔ loggedout ∪ {user}
 	end
+	
+	//A citizen can register an account in the system
+	event RegisterCitizen
+	any user password where
+		@grd1: user ∈ USER
+		@grd2: password ∈ STRING
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: citizens ≔ citizens ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+	
+	//A user changes their password
+	event ChangePassword
+	any user password where
+		@grd1: user ∈ registered
+		@grd2: password ∈ STRING
+	then
+		@act1: passwords(user) ≔ password
+	end
+	
+	//A user logs into the system
+	event Login
+	any user password where
+		@grd1: user ∈ registered
+		@grd2: user ∈ loggedout
+		@grd3: password ∈ STRING
+		@grd4: passwords(user) = password
+	then
+		@act1: loggedin ≔ loggedin ∪ {user}
+		@act2: loggedout ≔ loggedout ∖ {user}
+	end
+	
+	//A user logs out of the system
+	event Logout
+	any user where
+		@grd1: user ∈ registered
+		@grd2: user ∈ loggedin
+	then
+		@act1: loggedout ≔ loggedout ∪ {user}
+		@act2: loggedin ≔ loggedin ∖ {user}
+	end
 end

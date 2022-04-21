@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="STRING" org.eventb.core.type="ℙ(STRING)"/>
@@ -13,75 +13,75 @@
         <org.eventb.core.poIdentifier name="registered" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="loggedout" org.eventb.core.type="ℙ(USER)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×STRING))∈(∅ ⦂ ℙ(USER)) ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×STRING))∈(∅ ⦂ ℙ(USER)) ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlVr1MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
@@ -95,79 +95,79 @@
         <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×STRING)"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPadministratort" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratort" org.eventb.core.poStamp="0"/>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(administrators∪{user})∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(administrators∪{user})∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(administrators∪{user})∪staff∪citizens=registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(administrators∪{user})∪staff∪citizens=registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterAdmin/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterAdmin/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterAdmin\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTadministratoru" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratoru" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
         <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
@@ -176,84 +176,84 @@
         <org.eventb.core.poIdentifier name="administrators'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×STRING)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratoru" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratoru" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlWS5cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlW58MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlWS4cGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlW58cGAEeydYrNUywpZ1A"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratoru" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratoru" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8DqYcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8DqYsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8DDUsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8DqY8GNEeymZr8GF7FNHw"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="RegisterStaff/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∩(staff∪{user})∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∩(staff∪{user})∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪(staff∪{user})∪citizens=registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪(staff∪{user})∪citizens=registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="RegisterStaff/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+    <org.eventb.core.poSequent name="RegisterStaff/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterStaff\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorv" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorv" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
         <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
@@ -262,21 +262,199 @@
         <org.eventb.core.poIdentifier name="password" org.eventb.core.type="STRING"/>
         <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×STRING)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorv" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratorv" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlXhBcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlXhBsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_AlXhAcGAEeydYrNUywpZ1A|org.eventb.core.guard#_AlYIEMGAEeydYrNUywpZ1A"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorv" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratorv" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8ERdsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8E4gMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8ERcsGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8E4gcGNEeymZr8GF7FNHw"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlUdtsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwcGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEwsGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVEw8GAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="passwords∈registered ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVExMGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="administrators∪staff∪citizens=registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0MGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0cGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr0sGAEeydYrNUywpZ1A"/>
-        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_AlVr08GAEeydYrNUywpZ1A"/>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∩staff∩(citizens∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪staff∪(citizens∪{user})=registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#RegisterCitizen\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorw" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="STRING"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×STRING)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorw" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratorw" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈USER" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8Ffk8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8FfkMGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8FflMGNEeymZr8GF7FNHw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ChangePassword/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords{user ↦ password}∈registered ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GGo8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#ChangePassword\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorx" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="STRING"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×STRING)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorx" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratorx" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GGo8GNEeymZr8GF7FNHw|org.eventb.core.guard#_G8GGpsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GGo8GNEeymZr8GF7FNHw|org.eventb.core.guard#_G8GtsMGNEeymZr8GF7FNHw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Login/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTHYPadministratory)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∈dom(passwords)∧passwords∈USER ⇸ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8HUwsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8HUwsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTHYPadministratory)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∪{user}⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Login\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout ∖ {user}⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Login\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(loggedin∪{user})∩(loggedout ∖ {user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Login\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratory" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="STRING"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPadministratory)" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratory" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8GttcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedout" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8HUwMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="password∈STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8HUwcGNEeymZr8GF7FNHw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratory" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTHYPadministratory)" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="passwords(user)=password" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8GtssGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8HUwsGNEeymZr8GF7FNHw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Logout/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin ∖ {user}⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8HUxcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Logout\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Logout/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8HUxcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Logout\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Logout/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(loggedin ∖ {user})∩(loggedout∪{user})=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8HUxcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poSequent#Logout\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorz" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorz" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#EVTIDENTadministratorz" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8HUxcGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8H70cGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedin" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_G8HUxcGNEeymZr8GF7FNHw|org.eventb.core.guard#_G8H70sGNEeymZr8GF7FNHw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/coursework2/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1McGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1MsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1M8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8B1NcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="passwords∈registered ↣ STRING" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQMGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="administrators∪staff∪citizens=registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQcGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQsGNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcQ8GNEeymZr8GF7FNHw"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_G8CcRMGNEeymZr8GF7FNHw"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
