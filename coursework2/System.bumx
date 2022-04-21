@@ -1,0 +1,58 @@
+machine System
+sees SystemContext
+
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+
+//not entirely sure how to do passwords so feel free to change how they are done
+invariants
+	@inv1: registered ⊆ USER
+	@inv2: administrators ⊆ registered
+	@inv3: staff ⊆ registered
+	@inv4: citizens ⊆ registered
+	@inv5: administrators ∩ staff ∩ citizens = ∅
+	@inv6: passwords ∈ registered ↣ STRING
+	@inv7: administrators ∪ staff ∪ citizens = registered
+	@inv8: loggedin ⊆ registered
+	@inv9: loggedout ⊆ registered
+	@inv10: loggedin ∩ loggedout = ∅
+
+events
+	//check this - INITIALISATION sets all the variables to empty sets, I have no idea how to add a root user
+	event INITIALISATION
+	then
+		@act1: registered, staff, citizens, loggedin, loggedout, passwords, administrators ≔ ∅, ∅, ∅, ∅, ∅, ∅, ∅
+	end
+	
+	//An administrator registers a new administrator and adds there password to the relation
+	event RegisterAdmin
+	any admin user password where
+		@grd1: admin ∈ administrators
+		@grd2: password ∈ STRING
+		@grd3: user ∈ USER ∖ registered
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: administrators ≔ administrators ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+	
+	//An administrator registers a new staff member and adds there password to the relation
+	event RegisterStaff
+	any admin user password where
+		@grd1: admin ∈ administrators
+		@grd2: password ∈ STRING
+		@grd3: user ∈ USER ∖ registered
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: staff ≔ staff ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+end
