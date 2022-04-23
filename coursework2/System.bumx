@@ -10,14 +10,17 @@ variables
 	loggedout
 	passwords
 
-//not entirely sure how to do passwords so feel free to change how they are done
+
 invariants
 	@inv1: registered ⊆ USER
 	@inv2: administrators ⊆ registered
 	@inv3: staff ⊆ registered
 	@inv4: citizens ⊆ registered
+	//user can only have one role
 	@inv5: administrators ∩ staff ∩ citizens = ∅
-	@inv6: passwords ∈ registered ↣ STRING
+	//a set of ordered pairs
+	@inv6: passwords ∈ registered ↔ STRING
+	//not sure what this shows
 	@inv7: administrators ∪ staff ∪ citizens = registered
 	@inv8: loggedin ⊆ registered
 	@inv9: loggedout ⊆ registered
@@ -25,9 +28,13 @@ invariants
 
 events
 	//check this - INITIALISATION sets all the variables to empty sets, I have no idea how to add a root user
+	//Update->
+	
 	event INITIALISATION
 	then
-		@act1: registered, staff, citizens, loggedin, loggedout, passwords, administrators ≔ ∅, ∅, ∅, ∅, ∅, ∅, ∅
+		@act1: registered, staff, citizens, loggedin, loggedout, passwords ≔ ∅, ∅, ∅, ∅, ∅, ∅
+		//update: add an initial admin so they can do the stuff - like start the events running
+		@act2: administrators ≔ administrators ⋃ {root}
 	end
 	
 	//An administrator registers a new administrator and adds there password to the relation
@@ -61,6 +68,8 @@ events
 	any user password where
 		@grd1: user ∈ USER
 		@grd2: password ∈ STRING
+		//can't register twice/have same username
+		@grd3: user ∉ registered
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
@@ -83,6 +92,8 @@ events
 		@grd1: user ∈ registered
 		@grd2: user ∈ loggedout
 		@grd3: password ∈ STRING
+		
+		//is this something we can do?       
 		@grd4: passwords(user) = password
 	then
 		@act1: loggedin ≔ loggedin ∪ {user}
