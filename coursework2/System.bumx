@@ -19,7 +19,7 @@ invariants
 	//user can only have one role
 	@inv5: administrators ∩ staff ∩ citizens = ∅
 	//a set of ordered pairs
-	@inv6: passwords ∈ registered ↔ STRING
+	@inv6: passwords ∈ registered → PASSWORDS
 	//not sure what this shows
 	@inv7: administrators ∪ staff ∪ citizens = registered
 	@inv8: loggedin ⊆ registered
@@ -32,16 +32,30 @@ events
 	
 	event INITIALISATION
 	then
-		@act1: registered, staff, citizens, loggedin, loggedout, passwords ≔ ∅, ∅, ∅, ∅, ∅, ∅
-		//update: add an initial admin so they can do the stuff - like start the events running
-		@act2: administrators ≔ administrators ⋃ {root}
+		@act1: registered, staff, citizens, loggedin, loggedout, passwords,administrators ≔ ∅, ∅, ∅, ∅, ∅, ∅,∅
+		//update: add an initial administrator so they can do the stuff - like start the events running
+		
+	end
+	
+	//Adds a root administrator
+	event RootAdim
+	any user password where
+	 	@grd1: administrators = ∅
+	 	@grd2: registered = ∅
+	 	@grd3: user ∈ USER
+	 	@grd4: password ∈ PASSWORDS
+	then
+	 	@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: administrators ≔ administrators ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
 	end
 	
 	//An administrator registers a new administrator and adds there password to the relation
 	event RegisterAdmin
 	any admin user password where
 		@grd1: admin ∈ administrators
-		@grd2: password ∈ STRING
+		@grd2: password ∈ PASSWORDS
 		@grd3: user ∈ USER ∖ registered
 	then
 		@act1: registered ≔ registered ∪ {user}
@@ -54,8 +68,9 @@ events
 	event RegisterStaff
 	any admin user password where
 		@grd1: admin ∈ administrators
-		@grd2: password ∈ STRING
+		@grd2: password ∈ PASSWORDS
 		@grd3: user ∈ USER ∖ registered
+		@grd4: administrators ≠ ∅
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
@@ -67,7 +82,7 @@ events
 	event RegisterCitizen
 	any user password where
 		@grd1: user ∈ USER
-		@grd2: password ∈ STRING
+		@grd2: password ∈ PASSWORDS
 		//can't register twice/have same username
 		@grd3: user ∉ registered
 	then
@@ -81,7 +96,7 @@ events
 	event ChangePassword
 	any user password where
 		@grd1: user ∈ registered
-		@grd2: password ∈ STRING
+		@grd2: password ∈ PASSWORDS
 	then
 		@act1: passwords(user) ≔ password
 	end
@@ -91,7 +106,7 @@ events
 	any user password where
 		@grd1: user ∈ registered
 		@grd2: user ∈ loggedout
-		@grd3: password ∈ STRING
+		@grd3: password ∈ PASSWORDS
 		
 		//is this something we can do?       
 		@grd4: passwords(user) = password
