@@ -1,0 +1,106 @@
+machine System1
+refines System
+sees
+	SystemContext
+	SystemContext1
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+	centers
+	vaccineStock
+	vaccine
+	appointments
+	offers
+	availableDates
+	
+invariants
+	@inv11: centers ⊆ LOCATION
+	@inv12: vaccine ∈ BRAND ↔ NUM
+	@inv13: vaccineStock ∈ centers ↔ vaccine  //vaccine only in domain once
+	@inv14: appointments ∈ citizens ⇸ DATE
+	@inv15: availableDates ⊆ DATE
+	@inv16: offers ∈ citizens ⇸ DATE
+	@inv17: offers ∩ appointments = ∅
+	
+events
+
+	event INITIALISATION extends INITIALISATION
+	then
+		@act2: centers, vaccineStock, vaccine, appointments ≔ ∅, ∅, ∅, ∅
+	end
+
+	//Creates a new vaccine batch
+	event UpdateVaccineStock
+	any b n c a where
+		@grd1: b ∈ BRAND
+		@grd2: n ∈ NUM
+		//possible guard3 tyler knows what it is
+		@grd4: c ∈ centers
+		@grd5: a ∈ administrators
+	then
+		@act1: vaccine ≔ vaccine ∪ {b ↦ n}
+		@act2: vaccineStock ≔ vaccineStock ∪ {c ↦ (b ↦ n)}
+	end
+	
+	event addVaccineCentre
+	any a c where
+		@grd1: a ∈ administrators
+		@grd2: c ∈ LOCATION
+		@grd3: c ∉ centers
+	then
+		@act1: centers≔ centers ∪ {c}
+	end
+	
+	event startBooking
+	any c result d where 
+		@grd1: c ∈ citizens
+		@grd2: c ∉ dom(appointments)
+		@grd3: d ∈ availableDates
+		@grd4: result = { c ↦ d }
+		@grd5: {c} ◁ offers = ∅ //makes sure the citizen cannot have 2 booking offers
+	then
+		@act1: offers ≔ offers ∪ { c ↦ d }
+	end
+	
+	event confirmBooking 
+	any c o confirm where
+		@grd1: c ∈ citizens 
+		@grd2: o ∈ offers
+		@grd4: confirm ∈ BOOL
+		@grd3: confirm = TRUE
+	then
+		@act1: appointments ≔ appointments ∪ {o}
+		@act2: offers ≔ offers ∖ {o}
+	end
+	
+	event rejectBooking 
+	any c o confirm d where
+		@grd1: c ∈ citizens 
+		@grd2: o ∈ offers
+		@grd4: confirm ∈ BOOL
+		@grd3: confirm = FALSE
+		@grd5: d ∈ availableDates
+	then
+		@act1: offers ≔ offers ∖ {o}
+	end
+	
+	//start booking (gets first offer)
+	//get offer, add to offer
+	//confirm or reject -> remove from offer (just for current one) reject adds it to rejected offers
+	//if can add more to rejected offers, offer another, put in offer
+	//if cant offer another, leave booking
+	//event to just leave offer
+	
+	
+	
+	
+	
+		
+end
+
+

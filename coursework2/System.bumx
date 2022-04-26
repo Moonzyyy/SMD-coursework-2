@@ -10,7 +10,6 @@ variables
 	loggedout
 	passwords
 
-
 invariants
 	@inv1: registered ⊆ USER
 	@inv2: administrators ⊆ registered
@@ -85,6 +84,7 @@ events
 		@grd2: password ∈ PASSWORDS
 		//can't register twice/have same username
 		@grd3: user ∉ registered
+		@grd4: administrators ≠ ∅
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
