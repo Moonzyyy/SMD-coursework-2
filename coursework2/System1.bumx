@@ -17,6 +17,8 @@ variables
 	appointments
 	offers
 	availableDates
+	alreadyOffered
+  ongoingBooking
 	
 invariants
 	@inv11: centers ⊆ LOCATION
@@ -25,13 +27,18 @@ invariants
 	@inv14: appointments ∈ citizens ⇸ DATE
 	@inv15: availableDates ⊆ DATE
 	@inv16: offers ∈ citizens ⇸ DATE
-	@inv17: offers ∩ appointments = ∅
+	@inv17: alreadyOffered ∈ citizens ⇸ DATE
+	@inv18: offers ∩ appointments = ∅
+	@inv19: alreadyOffered ∩ offers = ∅
+	@inv20: ongoingBooking ∈ BOOL
 	
 events
 
+	//Initialises all variables
 	event INITIALISATION extends INITIALISATION
 	then
-		@act2: centers, vaccineStock, vaccine, appointments ≔ ∅, ∅, ∅, ∅
+		@act2: centers, vaccineStock, vaccine, appointments, offers, availableDates, alreadyOffered ≔ ∅, ∅, ∅, ∅, ∅, ∅, ∅
+		@act3: ongoingBooking ≔ FALSE
 	end
 
 	//Creates a new vaccine batch
@@ -39,7 +46,7 @@ events
 	any b n c a where
 		@grd1: b ∈ BRAND
 		@grd2: n ∈ NUM
-		//possible guard3 tyler knows what it is
+		//@grd3: n ∉ vaccine[b]
 		@grd4: c ∈ centers
 		@grd5: a ∈ administrators
 	then
@@ -47,60 +54,77 @@ events
 		@act2: vaccineStock ≔ vaccineStock ∪ {c ↦ (b ↦ n)}
 	end
 	
+	//Creates a new vaccine center
 	event addVaccineCentre
 	any a c where
 		@grd1: a ∈ administrators
 		@grd2: c ∈ LOCATION
 		@grd3: c ∉ centers
 	then
-		@act1: centers≔ centers ∪ {c}
+		@act1: centers ≔ centers ∪ {c}
 	end
 	
+	//starts an appointment booking for a citizen
 	event startBooking
-	any c result d where 
-		@grd1: c ∈ citizens
-		@grd2: c ∉ dom(appointments)
-		@grd3: d ∈ availableDates
-		@grd4: result = { c ↦ d }
-		@grd5: {c} ◁ offers = ∅ //makes sure the citizen cannot have 2 booking offers
+  any c d where 
+  	@grd1: c ∈ citizens
+  	@grd2: c ∉ dom(appointments)
+  	@grd3: d ∈ availableDates
+ 		@grd4: availableDates ≠ ∅
+  	@grd5: ongoingBooking = FALSE
+ 		@grd6: {c} ◁ offers = ∅ //makes sure the citizen cannot have 2 booking offers
 	then
-		@act1: offers ≔ offers ∪ { c ↦ d }
-	end
+  	@act1: offers ≔ offers ∪ {c ↦ d}
+  end
 	
-	event confirmBooking 
-	any c o confirm where
-		@grd1: c ∈ citizens 
-		@grd2: o ∈ offers
-		@grd4: confirm ∈ BOOL
-		@grd3: confirm = TRUE
-	then
-		@act1: appointments ≔ appointments ∪ {o}
-		@act2: offers ≔ offers ∖ {o}
-	end
-	
-	event rejectBooking 
-	any c o confirm d where
-		@grd1: c ∈ citizens 
-		@grd2: o ∈ offers
-		@grd4: confirm ∈ BOOL
-		@grd3: confirm = FALSE
-		@grd5: d ∈ availableDates
-	then
-		@act1: offers ≔ offers ∖ {o}
-	end
-	
-	//start booking (gets first offer)
-	//get offer, add to offer
-	//confirm or reject -> remove from offer (just for current one) reject adds it to rejected offers
-	//if can add more to rejected offers, offer another, put in offer
-	//if cant offer another, leave booking
-	//event to just leave offer
-	
-	
-	
-	
-	
-		
+	//Confirms the booking of an offered appointment
+  event confirmBooking 
+  any c o where
+ 		@grd1: c ∈ citizens 
+  	@grd2: o ∈ offers  //have an offer
+    @grd4: ongoingBooking = TRUE
+  then
+    @act1: appointments ≔ appointments ∪ {o}    //and now they are in dom of appointments, so cant start booking
+    @act2: offers ≔ offers ∖ {o}
+    @act3: ongoingBooking ≔ FALSE
+    @act4: alreadyOffered ≔ ∅
+  end
+
+	//The citizen rejects an offered booking
+  event rejectBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: o ∈ offers
+  	@grd3: d ∈ availableDates ∖ ran(alreadyOffered)
+  	@grd4: ongoingBooking = TRUE
+  then
+  	@act1: alreadyOffered ≔ alreadyOffered ∪ {o}
+  	@act2: offers ≔ offers ∖ {o}
+  end
+
+	//Aborts a booking event
+  event abortBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: o ∈ offers
+  	@grd3: d ∈ availableDates
+  	@grd4: ongoingBooking = TRUE
+  then
+  	@act1: offers ≔ offers ∖ {o}
+  	@act2: ongoingBooking ≔ FALSE
+  end
+
+	//changes a booking
+  event changeBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: c ∈ dom(appointments)
+  	@grd3: o ∈ offers
+  	@grd4: d ∈ availableDates
+  	@grd5: ongoingBooking = TRUE
+  then
+  	@act1: offers ≔ offers ∪ {o}
+  end
 end
 
 

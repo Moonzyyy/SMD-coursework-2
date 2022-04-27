@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="18">
+<org.eventb.core.poFile org.eventb.core.poStamp="43">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
@@ -8,7 +8,7 @@
         <org.eventb.core.poIdentifier name="NUM" org.eventb.core.type="ℙ(NUM)"/>
         <org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="37">
         <org.eventb.core.poIdentifier name="citizens" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
         <org.eventb.core.poIdentifier name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
@@ -17,63 +17,84 @@
         <org.eventb.core.poIdentifier name="loggedin" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="ongoingBooking" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
         <org.eventb.core.poIdentifier name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="registered" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         <org.eventb.core.poIdentifier name="loggedout" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.poPredicate name="availableDatet" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN0m4cVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDateu" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN0m4sVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDatev" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN1N8MVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDatew" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN1N8cVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDatex" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN11AMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDatey" org.eventb.core.predicate="passwords∈registered → PASSWORDS" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN11AcVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDatez" org.eventb.core.predicate="administrators∪staff∪citizens=registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN2cEMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDate{" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN2cEcVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDate|" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN3DIMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="availableDate}" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN3DIcVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinh" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN0m4cVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookini" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN0m4sVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinj" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN1N8MVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookink" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN1N8cVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinl" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN11AMVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinm" org.eventb.core.predicate="passwords∈registered → PASSWORDS" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN11AcVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinn" org.eventb.core.predicate="administrators∪staff∪citizens=registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN2cEMVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookino" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN2cEcVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinp" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN3DIMVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poPredicate name="ongoingBookinq" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.invariant#_VN3DIcVeEeyU4vRoetBcAA"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatet"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(LOCATION×(BRAND×NUM)))∈(∅ ⦂ ℙ(LOCATION)) ↔ (∅ ⦂ ℙ(BRAND×NUM))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(LOCATION×(BRAND×NUM)))∈(∅ ⦂ ℙ(LOCATION)) ↔ (∅ ⦂ ℙ(BRAND×NUM))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYAsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatet"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9cVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AsYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYAsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9cVnEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AsYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatet"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers'∈(∅ ⦂ ℙ(USER)) ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYAsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv17/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatet"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers'∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="INITIALISATION/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYAsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDatet" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+    <org.eventb.core.poSequent name="INITIALISATION/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/coursework2/System.bum|org.eventb.core.machineFile#System|org.eventb.core.event#_VN3qMMVeEeyU4vRoetBcAA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsFiE8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#INITIALISATION\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookinh" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="vaccineStock'" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
         <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="alreadyOffered'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.poIdentifier name="vaccine'" org.eventb.core.type="ℙ(BRAND×NUM)"/>
@@ -81,19 +102,20 @@
         <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="centers'" org.eventb.core.type="ℙ(LOCATION)"/>
         <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="ongoingBooking'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="availableDates'" org.eventb.core.type="ℙ(DATE)"/>
         <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDatet" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDatet" org.eventb.core.poStamp="12"/>
-    <org.eventb.core.poSequent name="UpdateVaccineStock/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDateu"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vaccineStock∪{c ↦ (b ↦ n)}∈centers ↔ vaccine∪{b ↦ n}" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYBMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookinh" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookinh" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="UpdateVaccineStock/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookini"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vaccineStock∪{c ↦ (b ↦ n)}∈centers ↔ vaccine∪{b ↦ n}" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGJIcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#UpdateVaccineStock\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDateu" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookini" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
         <org.eventb.core.poIdentifier name="vaccineStock'" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
         <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BRAND"/>
         <org.eventb.core.poIdentifier name="n" org.eventb.core.type="NUM"/>
@@ -101,133 +123,249 @@
         <org.eventb.core.poIdentifier name="vaccine'" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USER"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDateu" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDateu" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b∈BRAND" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYBMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwf_FMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈NUM" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYBMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwf_FcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈centers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYBMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwf_FsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwfYBMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwf_F8VnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookini" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookini" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b∈BRAND" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGJIcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsGJJsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈NUM" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGJIcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsGwMMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈centers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGJIcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsGwMcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGJIcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsGwMsYgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="addVaccineCentre/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatev"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vaccineStock∈centers∪{c} ↔ vaccine" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwgmIsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="addVaccineCentre/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vaccineStock∈centers∪{c} ↔ vaccine" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGwNcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#addVaccineCentre\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDatev" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookinj" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="LOCATION"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="centers'" org.eventb.core.type="ℙ(LOCATION)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDatev" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDatev" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwgmIsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwgmJcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈LOCATION" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwgmIsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwgmJsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∉centers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwgmIsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwhNMMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookinj" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookinj" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGwNcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsHXQsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈LOCATION" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGwNcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsHXQ8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∉centers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsGwNcYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsHXRMYgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="startBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatew"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers∪{c ↦ d}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="startBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookink"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers∪{c ↦ d}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#startBooking\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="startBooking/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatew"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers∪{c ↦ d})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#startBooking\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    <org.eventb.core.poSequent name="startBooking/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookink"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers∪{c ↦ d})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#startBooking\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDatew" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
-        <org.eventb.core.poIdentifier name="result" org.eventb.core.type="ℙ(USER×DATE)"/>
+    <org.eventb.core.poSequent name="startBooking/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookink"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="alreadyOffered∩(offers∪{c ↦ d})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#startBooking\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookink" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
         <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDatew" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDatew" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwhNNsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉dom(appointments)" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwh0QMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="d∈availableDates" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwh0QcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="result={c ↦ d}" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwh0QsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwhNMsVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwh0Q8VnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookink" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookink" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsH-UsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉dom(appointments)" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsH-U8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="d∈availableDates" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsH-VMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="availableDates≠(∅ ⦂ ℙ(DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsH-VcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ongoingBooking=FALSE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsIlYMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsHXRsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsIlYcYgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="confirmBooking/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatex"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointments∪{o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9cVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9cVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="confirmBooking/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointments∪{o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AsYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#confirmBooking\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="confirmBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatex"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="confirmBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#confirmBooking\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="confirmBooking/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatex"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers ∖ {o})∩(appointments∪{o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="confirmBooking/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#confirmBooking\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDatex" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+    <org.eventb.core.poSequent name="confirmBooking/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers ∖ {o})∩(appointments∪{o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#confirmBooking\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="confirmBooking/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinl"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#confirmBooking\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookinl" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="alreadyOffered'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER×DATE"/>
         <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.poIdentifier name="confirm" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="ongoingBooking'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDatex" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDatex" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwibVMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwibVcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="confirm∈BOOL" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwibVsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="confirm=TRUE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwibUMVnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjCYMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookinl" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookinl" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsIlZsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsJMcMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ongoingBooking=TRUE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsIlY8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsJMccYgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="rejectBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatey"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="rejectBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinm"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#rejectBooking\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="rejectBooking/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPavailableDatey"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="rejectBooking/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinm"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="alreadyOffered∪{o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#rejectBooking\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTavailableDatey" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+    <org.eventb.core.poSequent name="rejectBooking/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinm"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#rejectBooking\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="rejectBooking/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinm"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(alreadyOffered∪{o})∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#rejectBooking\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookinm" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="alreadyOffered'" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookinm" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookinm" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsJzg8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsJzhMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="d∈availableDates ∖ ran(alreadyOffered)" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsJzhcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ongoingBooking=TRUE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsJMdsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsKakMYgEeyDtIkVP9eaKQ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="abortBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinn"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#abortBooking\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="abortBooking/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinn"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#abortBooking\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="abortBooking/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookinn"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="alreadyOffered∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#abortBooking\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookinn" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
         <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
         <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER×DATE"/>
         <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
         <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.poIdentifier name="confirm" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="ongoingBooking'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPavailableDatey" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTavailableDatey" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjpcMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjpccVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="confirm∈BOOL" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjpcsVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="confirm=FALSE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjpc8VnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="d∈availableDates" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_cwjCY8VnEeyU4vRoetBcAA|org.eventb.core.guard#_cwjpdMVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookinn" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookinn" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLBoMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLBocYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="d∈availableDates" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLBosYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ongoingBooking=TRUE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsKak8YgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLBo8YgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="18">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="centers⊆LOCATION" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew8sVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew88VnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9MVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="appointments∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9cVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="availableDates⊆DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwew9sVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="offers∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAMVnEeyU4vRoetBcAA"/>
-        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_cwfYAcVnEeyU4vRoetBcAA"/>
+    <org.eventb.core.poSequent name="changeBooking/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookino"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="offers∪{o}∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#changeBooking\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="changeBooking/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookino"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(offers∪{o})∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#changeBooking\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="changeBooking/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTALLHYPongoingBookino"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="alreadyOffered∩(offers∪{o})=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poSequent#changeBooking\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTongoingBookino" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPongoingBookino" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#EVTIDENTongoingBookino" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLos8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈dom(appointments)" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLotMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="o∈offers" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsLotcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="d∈availableDates" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsMPwMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ongoingBooking=TRUE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.event#_VsLBpsYgEeyDtIkVP9eaKQ|org.eventb.core.guard#_VsMPwcYgEeyDtIkVP9eaKQ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/coursework2/System1.bpo|org.eventb.core.poFile#System1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="43">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="centers⊆LOCATION" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsET98YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="appointments∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7AsYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="availableDates⊆DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7A8YgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="offers∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsE7BcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEMYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEcYgEeyDtIkVP9eaKQ"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="ongoingBooking∈BOOL" org.eventb.core.source="/coursework2/System1.bum|org.eventb.core.machineFile#System1|org.eventb.core.invariant#_VsFiEsYgEeyDtIkVP9eaKQ"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

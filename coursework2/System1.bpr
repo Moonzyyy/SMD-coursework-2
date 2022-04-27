@@ -172,29 +172,32 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="INITIALISATION/inv16/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DATE,USER">
+    <org.eventb.core.prProof name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DATE,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers'∈(∅ ⦂ ℙ(USER)) ⇸ DATE"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="offers'=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="startBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
-                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p8,p1,p13,p6,p15,p2,p16,p3,p4,p9,p11,p17,p5,p7,p14,p19,p20">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p13,p8,p1,p14,p6,p16,p2,p17,p3,p4,p9,p11,p5,p7,p12,p19,p20,p21">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -211,39 +214,40 @@
         <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
         <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
         <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prIdent name="result" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="registered⊆USER"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers∪{c ↦ d}∈citizens ⇸ DATE"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬c∈dom(offers)"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬c∈dom(offers)"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬availableDates=(∅ ⦂ ℙ(DATE))"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="staff⊆registered"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬c∈dom(appointments)"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="result={c ↦ d}"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="availableDates≠(∅ ⦂ ℙ(DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="centers⊆LOCATION"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="c∉dom(appointments)"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="availableDates⊆DATE"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈citizens"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="d∈availableDates"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="administrators⊆registered"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="loggedout⊆registered"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ongoingBooking=FALSE"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="loggedout⊆registered"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="confirmBooking/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
@@ -257,6 +261,9 @@
                 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="ongoingBooking∈BOOL">
+            <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="registered⊆USER">
             <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
             <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
@@ -265,9 +272,6 @@
             <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
             <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
             <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="confirm∈BOOL">
-            <org.eventb.core.prIdent name="confirm" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="centers⊆LOCATION">
             <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
@@ -286,24 +290,24 @@
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="offers'" org.eventb.core.type="ℙ(USER×DATE)"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers'∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈(∅ ⦂ ℙ(USER)) ⇸ DATE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="startBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="DATE,USER">
+    <org.eventb.core.prProof name="startBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="DATE,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p4,p2,p6">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p3,p5,p2,p7,p8">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -316,82 +320,34 @@
         <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
         <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.prIdent name="result" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="registered⊆USER">
+            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬c∈dom(offers)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="d∈availableDates"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers∪{c ↦ d})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="registered⊆USER">
-            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="c∈citizens"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬c∈dom(appointments)"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
-            <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
-            <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
-            <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="result={c ↦ d}"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="centers⊆LOCATION">
-            <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
-            <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="d∈availableDates"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∉dom(appointments)"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="availableDates⊆DATE"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="confirmBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="DATE,USER">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4,p2,p1,p3">
-                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
-        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prIdent name="confirm" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
-        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="registered⊆USER">
-            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="o∈offers"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="c∈citizens"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="confirm=TRUE"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ongoingBooking=FALSE"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬c∈dom(appointments)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
             <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
             <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
             <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="confirm∈BOOL"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers ∖ {o})∩(appointments∪{o})=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="offers∩(appointments∪{o})⊆{o}"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="centers⊆LOCATION">
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="centers⊆LOCATION">
             <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
             <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="availableDates⊆DATE">
-            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∉dom(appointments)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="availableDates⊆DATE"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="confirmBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+    <org.eventb.core.prProof name="confirmBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -399,8 +355,62 @@
                 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
                 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p19"/>
                 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p20"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p21"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p8,p1,p13,p7,p14,p2,p15,p4,p5,p9,p10,p16,p6,p3,p12">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p13,p9,p1,p14,p7,p15,p2,p16,p4,p5,p10,p12,p11,p6,p3,p8">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="confirmBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p19"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p9,p1,p13,p7,p14,p2,p15,p4,p5,p10,p11,p6,p3,p8">
                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
@@ -410,7 +420,114 @@
         <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
         <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prIdent name="confirm" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="rejectBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p17"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p18"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p8,p1,p12,p7,p13,p2,p14,p4,p5,p9,p10,p6,p3">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="rejectBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p19"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p20"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="p11,p8,p1,p12,p7,p13,p2,p14,p4,p5,p9,p10,p15,p6,p3">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
@@ -432,41 +549,41 @@
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="administrators⊆registered"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="confirm=TRUE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="loggedout⊆registered"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="confirm∈BOOL"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="offers∩appointments⊆{o}"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="centers⊆LOCATION"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="availableDates⊆DATE">
             <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="rejectBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+    <org.eventb.core.prProof name="abortBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p19"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p20"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p21"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p9,p2,p13,p8,p14,p3,p15,p5,p6,p10,p11,p16,p7,p4,p1">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p19"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p9,p1,p13,p7,p14,p2,p15,p4,p5,p10,p11,p6,p3,p8">
                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
         <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
         <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prIdent name="confirm" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
         <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
@@ -476,34 +593,30 @@
         <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="confirm=FALSE"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="citizens⊆registered"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="registered⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="loggedin⊆registered"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="o∈offers"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="c∈citizens"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="d∈availableDates"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="administrators⊆registered"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="loggedout⊆registered"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers ∖ {o}∈citizens ⇸ DATE"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="confirm∈BOOL"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="centers⊆LOCATION"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="availableDates⊆DATE">
-            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="availableDates⊆DATE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="rejectBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+    <org.eventb.core.prProof name="abortBooking/inv17/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
@@ -513,8 +626,7 @@
                         <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p19"/>
                         <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
                         <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p21"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p22"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p12,p9,p2,p13,p8,p14,p3,p15,p5,p6,p10,p11,p16,p7,p4,p1">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p12,p9,p1,p13,p7,p14,p2,p15,p4,p5,p10,p11,p16,p6,p3,p8">
                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -523,10 +635,11 @@
         </org.eventb.core.prRule>
         <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
         <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
         <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
         <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.prIdent name="confirm" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
         <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
@@ -536,15 +649,15 @@
         <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
         <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
         <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="confirm=FALSE"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="registered⊆USER"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="loggedin⊆registered"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="o∈offers"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="c∈citizens"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="d∈availableDates"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
@@ -556,13 +669,673 @@
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="loggedout⊆registered"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="offers∩appointments⊆{o}"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="confirm∈BOOL"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="centers⊆LOCATION"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="availableDates⊆DATE">
-            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
-        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DATE,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="startBooking/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="DATE,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p3,p6,p2,p8,p9,p10">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="registered⊆USER">
+            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬c∈dom(offers)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬availableDates=(∅ ⦂ ℙ(DATE))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers∪{c ↦ d})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ongoingBooking=FALSE"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬c∈dom(appointments)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
+            <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+            <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
+            <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="availableDates≠(∅ ⦂ ℙ(DATE))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="centers⊆LOCATION">
+            <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+            <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="c∉dom(appointments)"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="availableDates⊆DATE"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="confirmBooking/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="DATE,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4,p2,p1,p3">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="registered⊆USER">
+            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
+            <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+            <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
+            <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers ∖ {o})∩(appointments∪{o})=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="offers∩(appointments∪{o})⊆{o}"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="centers⊆LOCATION">
+            <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+            <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="rejectBooking/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p21"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p13,p9,p1,p15,p7,p16,p2,p17,p4,p5,p10,p12,p11,p18,p14,p6,p3,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments⊆{o}"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="abortBooking/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p14,p10,p1,p16,p7,p17,p2,p18,p4,p5,p11,p13,p12,p19,p15,p6,p3,p9,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers ∖ {o})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="offers∩appointments⊆{o}"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv19/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DATE,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(∅ ⦂ ℙ(USER×DATE))=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="startBooking/inv19/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ongoingBooking∈BOOL">
+            <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="registered⊆USER">
+            <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+            <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="{c} ◁ offers=(∅ ⦂ ℙ(USER×DATE))">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+            <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+            <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬c∈dom(offers)">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+            <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+            <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬c∈dom(appointments)">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+            <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+            <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM">
+            <org.eventb.core.prIdent name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+            <org.eventb.core.prIdent name="NUM" org.eventb.core.type="ℙ(NUM)"/>
+            <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="availableDates≠(∅ ⦂ ℙ(DATE))">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬availableDates=(∅ ⦂ ℙ(DATE))">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="centers⊆LOCATION">
+            <org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+            <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="c∉dom(appointments)">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+            <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+            <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="confirmBooking/inv19/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="DATE,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×DATE))∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="rejectBooking/inv19/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p21"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p13,p9,p1,p15,p7,p16,p2,p17,p4,p5,p10,p12,p11,p18,p14,p6,p3,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="(alreadyOffered∪{o})∩offers⊆{o}"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="availableDates⊆DATE">
+            <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(alreadyOffered∪{o})∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="abortBooking/inv19/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p14,p10,p1,p16,p7,p17,p2,p18,p4,p5,p11,p13,p12,p19,p15,p6,p3,p9,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="alreadyOffered∩offers⊆{o}"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="alreadyOffered∩(offers ∖ {o})=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="changeBooking/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14,p10,p1,p16,p7,p17,p2,p18,p4,p5,p11,p13,p12,p19,p15,p6,p20,p3,p9,p8">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="c∈dom(appointments)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="offers∪{o}∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="changeBooking/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14,p10,p1,p16,p7,p17,p2,p18,p4,p5,p11,p13,p12,p19,p15,p6,p20,p3,p9,p8">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(offers∪{o})∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="c∈dom(appointments)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="changeBooking/inv19/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="BRAND,DATE,LOCATION,NUM,PASSWORDS,USER">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p22"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p23"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p24"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14,p10,p1,p16,p7,p17,p2,p18,p4,p5,p11,p13,p12,p19,p15,p6,p20,p3,p9,p8">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="alreadyOffered" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="availableDates" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.prIdent name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.prIdent name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.prIdent name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="o" org.eventb.core.type="USER×DATE"/>
+        <org.eventb.core.prIdent name="offers" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.prIdent name="ongoingBooking" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.prIdent name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.prIdent name="vaccine" org.eventb.core.type="ℙ(BRAND×NUM)"/>
+        <org.eventb.core.prIdent name="vaccineStock" org.eventb.core.type="ℙ(LOCATION×(BRAND×NUM))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="citizens⊆registered"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="registered⊆USER"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="o∈offers"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="vaccineStock∈centers ↔ vaccine"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passwords∈registered → PASSWORDS"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="staff⊆registered"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="ongoingBooking∈BOOL"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="offers∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="offers∩appointments=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="centers⊆LOCATION"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="availableDates⊆DATE"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="c∈dom(appointments)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="alreadyOffered∩(offers∪{o})=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="loggedin⊆registered"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="loggedin∩loggedout=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="c∈citizens"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ongoingBooking=TRUE"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="d∈availableDates"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="appointments∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="alreadyOffered∈citizens ⇸ DATE"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="administrators⊆registered"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="alreadyOffered∩offers=(∅ ⦂ ℙ(USER×DATE))"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="vaccine∈BRAND ↔ NUM"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="administrators∩staff∩citizens=(∅ ⦂ ℙ(USER))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="administrators∪staff∪citizens=registered"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="loggedout⊆registered"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>
