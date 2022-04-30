@@ -1,0 +1,146 @@
+machine VaccineSystemExt2
+refines VaccineSystemExtended
+sees
+	VaccineSystemExt2Context
+	VaccineSystemExtendedContext
+	VaccineSystemContext
+	
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+	NHSNumbersOfCitizens
+	//NHSno
+	namesOfCitizens
+	//name
+	
+	vaccine
+	batchNo
+	
+	centers
+	appointmentsPerDay
+	vaccineStock
+	
+	appointments
+	centerAppointments
+	
+	offers
+	availableDates
+	alreadyOffered
+    ongoingBooking
+    
+    
+    certificate
+    citizenCertificates
+    
+    resultCitizen
+    
+    
+invariants
+	@inv23: certificate ⊆ vaccine ⇸ DATE // partial function (not every vaccine has to be in a certificate), DATE not injective or surjective
+	@inv24: citizenCertificates ⊆ certificate → citizens  //total function, certifcate once, citizen many
+	@inv25: resultCitizen = USER
+	
+events
+
+    //Initialises all variables
+	event INITIALISATION extends INITIALISATION
+	then
+		@act4: certificate, citizenCertificates ≔ ∅,∅
+		@act5: resultCitizen ≔ ∅
+	end
+	
+	event UpdateVaccineStock extends UpdateVaccineStock
+	end
+	
+	event addVaccineCentre extends addVaccineCentre
+	end
+	
+	event startBooking extends startBooking
+    end
+	
+    /*event confirmBooking extends confirmBooking
+    end
+
+    event rejectBooking extends rejectBooking
+    end
+
+    event abortBooking extends abortBooking
+    end
+
+    event changeBooking extends changeBooking
+    end
+    * 
+    */
+
+	event RootAdmin extends RootAdmin
+	end
+	
+	event RegisterAdmin extends RegisterAdmin
+	end
+	
+	event RegisterCitizen extends RegisterCitizen
+	end
+	
+	event RegisterStaff extends RegisterStaff
+	end
+	
+	event ChangePassword extends ChangePassword
+	end
+	
+	event Login extends Login
+	end
+	
+	event Logout extends Logout
+	end
+
+  	
+	
+	event giveCertificate
+	end
+
+ 	event administerVaccine
+  	any s c v d where
+  		@grd1: s ∈ staff
+  		@grd2: c ∈ citizens
+  		@grd3: c ∈ dom(appointments)
+  		//Possible date guard
+  		@grd5: v ∈ vaccine
+  		@grd6: d ∈ DATE
+  		@grd7: appointments(c) = d
+  	then
+  		@act1: certificate ≔ certificate ∪ {{ v ↦ d }}
+  		@act2: citizenCertificates ≔ citizenCertificates ∪ {{ {v ↦ d} ↦ c}}
+  		@act3: vaccineStock ≔  {v} ⩤ vaccineStock
+	end
+	
+
+	event viewCertificate
+	any c result where
+		@grd1: c ∈ citizens
+		@grd2: result ∈ certificate
+		
+	end	
+	
+	event viewBooking 
+	any c result where 
+	 	@grd1: c ∈ citizens
+	 	@grd2: result ∈ DATE
+	 	@grd3: appointments(c) = result
+	end 
+	
+	event viewDetails
+	any member number where
+		@grd1: member ∈ administrators ∪ staff
+		@grd2: number ∈ ℕ
+	then
+		@act1: resultCitizen ≔ {NHSNumbersOfCitizens(number)}
+	end
+
+
+end
+	

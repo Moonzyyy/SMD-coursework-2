@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_CL9sEMe6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="LOCATION"/>
+    <org.eventb.core.carrierSet name="_CL9sEce6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="DATE"/>
+    <org.eventb.core.carrierSet name="_CL-TIMe6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="BRAND"/>
+</org.eventb.core.contextFile>

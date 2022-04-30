@@ -1,0 +1,12 @@
+context VaccineSystemContext
+sets
+	USER
+	PASSWORDS
+	STRING
+//constants
+//	root
+
+//axioms
+//	rootUser  USER
+
+end

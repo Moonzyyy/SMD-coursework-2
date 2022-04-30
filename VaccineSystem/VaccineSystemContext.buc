@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_niLUkMe6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="USER"/>
+    <org.eventb.core.carrierSet name="_niL7oMe6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="PASSWORDS"/>
+    <org.eventb.core.carrierSet name="_niMisMe6EeyeU91frzCrQg" org.eventb.core.generated="false" org.eventb.core.identifier="STRING"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/VaccineSystem/VaccineSystemContext.buc|org.eventb.core.contextFile#VaccineSystemContext|org.eventb.core.carrierSet#_niLUkMe6EeyeU91frzCrQg" org.eventb.core.type="ℙ(USER)"/>
+    <org.eventb.core.scCarrierSet name="STRING" org.eventb.core.source="/VaccineSystem/VaccineSystemContext.buc|org.eventb.core.contextFile#VaccineSystemContext|org.eventb.core.carrierSet#_niMisMe6EeyeU91frzCrQg" org.eventb.core.type="ℙ(STRING)"/>
+    <org.eventb.core.scCarrierSet name="PASSWORDS" org.eventb.core.source="/VaccineSystem/VaccineSystemContext.buc|org.eventb.core.contextFile#VaccineSystemContext|org.eventb.core.carrierSet#_niL7oMe6EeyeU91frzCrQg" org.eventb.core.type="ℙ(PASSWORDS)"/>
+</org.eventb.core.scContextFile>

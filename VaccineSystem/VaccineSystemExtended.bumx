@@ -1,0 +1,178 @@
+machine VaccineSystemExtended
+refines VaccineSystem
+sees
+	VaccineSystemExtendedContext
+	VaccineSystemContext
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+	NHSNumbersOfCitizens
+	//NHSno
+	namesOfCitizens
+	//name
+	
+	vaccine
+	batchNo
+	
+	centers
+	appointmentsPerDay
+	vaccineStock
+	
+	appointments
+	centerAppointments
+	
+	offers
+	availableDates
+	alreadyOffered
+    ongoingBooking
+	
+invariants
+	@inv11: centers ⊆ LOCATION
+	@inv22: appointmentsPerDay ∈ centers → ℕ
+	
+	@inv21: batchNo ⊆ ℕ
+	@inv12: vaccine ∈ batchNo → BRAND  //batchNo must be only in range once
+	
+	@inv13: vaccineStock ∈ vaccine ⇸ centers  //vaccine only in there once, center any amount of time not injective. not all vaccines have to be at a center as some will be given to people (partial)
+	@inv14: appointments ∈ citizens ⇸ DATE  //not all citizen needed (partial) only once citizen (function) DATE doesnt have to be unique or all filled
+	@inv23: centerAppointments ∈ appointments → centers  //appointments only once, any existing must be in relation. dont have to be unique centers, not all centers must be there
+	@inv15: availableDates ⊆ DATE
+	@inv16: offers ∈ citizens ⇸ DATE
+	@inv17: alreadyOffered ∈ citizens ⇸ DATE
+	@inv18: offers ∩ appointments = ∅
+	@inv19: alreadyOffered ∩ offers = ∅
+	@inv20: ongoingBooking ∈ BOOL
+
+	
+	
+events
+
+	//Initialises all variables
+	event INITIALISATION extends INITIALISATION
+	then
+		@act2: centers, vaccineStock, vaccine, appointments, centerAppointments, offers, availableDates, alreadyOffered, batchNo, appointmentsPerDay ≔ ∅, ∅, ∅, ∅, ∅, ∅, ∅,∅,∅,∅
+		@act3: ongoingBooking ≔ FALSE
+	end
+	
+	event RootAdmin extends RootAdmin
+	end
+	
+	event RegisterAdmin extends RegisterAdmin
+	end
+	
+	event RegisterCitizen extends RegisterCitizen
+	end
+	
+	event RegisterStaff extends RegisterStaff
+	end
+	
+	event ChangePassword extends ChangePassword
+	end
+	
+	event Login extends Login
+	end
+	
+	event Logout extends Logout
+	end
+	
+	
+	
+	//Creates a new vaccine batch
+	event UpdateVaccineStock
+	any b n c a where
+		@grd1: b ∈ BRAND
+		@grd2: n ∈ ℕ
+		//@grd3: n ∉ vaccine[b]
+		@grd4: c ∈ centers
+		@grd5: a ∈ administrators
+		@grd6: n ∉ dom(vaccine)
+		@grd7: n ∉ batchNo
+		@grd8: {n ↦ b} ⊈ dom(vaccineStock)
+	then
+		@act1: vaccine ≔ vaccine ∪ {n ↦ b}
+		@act2: vaccineStock ≔ vaccineStock ∪ {(n ↦ b) ↦ c }
+	end
+	
+	//Creates a new vaccine center
+	event addVaccineCentre
+	any a c n where
+		@grd1: a ∈ administrators
+		@grd2: c ∈ LOCATION
+		@grd3: c ∉ centers
+		@grd4: n ∈ ℕ
+	then
+		@act1: centers ≔ centers ∪ {c}
+		@act2: appointmentsPerDay ≔ appointmentsPerDay ∪ {c ↦ n}
+	end
+	
+	//starts an appointment booking for a citizen
+	event startBooking
+  any c d where 
+  	@grd1: c ∈ citizens
+  	@grd2: c ∉ dom(appointments)
+  	@grd3: d ∈ availableDates
+ 	@grd4: availableDates ≠ ∅
+  	@grd5: ongoingBooking = FALSE
+ 	@grd6: {c} ◁ offers = ∅ //makes sure the citizen cannot have 2 booking offers
+	then
+  	@act1: offers ≔ offers ∪ {c ↦ d}
+  end
+	
+	//Confirms the booking of an offered appointment
+  event confirmBooking 
+  any c o where
+ 	@grd1: c ∈ citizens 
+ 	@grd3: offers ≠ ∅
+  	@grd2: o ∈ offers  //have an offer
+    @grd4: ongoingBooking = TRUE
+  then
+    @act1: offers ≔ offers ∖ {o}
+    @act2: appointments ≔ appointments ∪ {o}    //and now they are in dom of appointments, so cant start booking
+    
+    @act3: ongoingBooking ≔ FALSE
+    @act4: alreadyOffered ≔ ∅
+  end
+
+	//The citizen rejects an offered booking
+  event rejectBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: o ∈ offers
+  	@grd3: d ∈ availableDates ∖ ran(alreadyOffered)
+  	@grd4: ongoingBooking = TRUE
+  then
+  	@act1: alreadyOffered ≔ alreadyOffered ∪ {o}
+  	@act2: offers ≔ offers ∖ {o}
+  end
+
+	//Aborts a booking event
+  event abortBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: o ∈ offers
+  	@grd3: d ∈ availableDates
+  	@grd4: ongoingBooking = TRUE
+  then
+  	@act1: offers ≔ offers ∖ {o}
+  	@act2: ongoingBooking ≔ FALSE
+  end
+
+	//changes a booking
+  event changeBooking 
+  any c o d where
+  	@grd1: c ∈ citizens 
+  	@grd2: c ∈ dom(appointments)
+  	@grd3: o ∈ offers
+  	@grd4: d ∈ availableDates
+  	@grd5: ongoingBooking = TRUE
+  then
+  	@act1: offers ≔ offers ∪ {o}
+  end
+end
+
+

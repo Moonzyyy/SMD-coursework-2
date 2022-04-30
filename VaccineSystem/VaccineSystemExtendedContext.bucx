@@ -1,0 +1,6 @@
+context VaccineSystemExtendedContext
+sets
+	LOCATION
+	DATE
+	BRAND
+end

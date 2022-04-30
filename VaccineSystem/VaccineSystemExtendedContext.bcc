@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scCarrierSet name="LOCATION" org.eventb.core.source="/VaccineSystem/VaccineSystemExtendedContext.buc|org.eventb.core.contextFile#VaccineSystemExtendedContext|org.eventb.core.carrierSet#_CL9sEMe6EeyeU91frzCrQg" org.eventb.core.type="ℙ(LOCATION)"/>
+    <org.eventb.core.scCarrierSet name="BRAND" org.eventb.core.source="/VaccineSystem/VaccineSystemExtendedContext.buc|org.eventb.core.contextFile#VaccineSystemExtendedContext|org.eventb.core.carrierSet#_CL-TIMe6EeyeU91frzCrQg" org.eventb.core.type="ℙ(BRAND)"/>
+    <org.eventb.core.scCarrierSet name="DATE" org.eventb.core.source="/VaccineSystem/VaccineSystemExtendedContext.buc|org.eventb.core.contextFile#VaccineSystemExtendedContext|org.eventb.core.carrierSet#_CL9sEce6EeyeU91frzCrQg" org.eventb.core.type="ℙ(DATE)"/>
+</org.eventb.core.scContextFile>

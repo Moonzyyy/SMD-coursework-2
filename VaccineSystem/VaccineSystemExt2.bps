@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="INITIALISATION/inv23/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv24/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv25/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateVaccineStock/inv23/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RegisterCitizen/inv24/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="administerVaccine/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="administerVaccine/inv23/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="administerVaccine/inv24/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="administerVaccine/vaccineStock/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="viewBooking/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="viewDetails/inv25/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="viewDetails/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

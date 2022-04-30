@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xmachine.base" org.eventb.core.generated="false" version="5">
+    <org.eventb.core.refinesMachine name="_M1s8wMh8EeywObjMZys5cQ" org.eventb.core.target="VaccineSystemExtended"/>
+    <org.eventb.core.seesContext name="_M1tj0Mh8EeywObjMZys5cQ" org.eventb.core.target="VaccineSystemExt2Context"/>
+    <org.eventb.core.seesContext name="_M1tj0ch8EeywObjMZys5cQ" org.eventb.core.target="VaccineSystemExtendedContext"/>
+    <org.eventb.core.seesContext name="_M1uK4Mh8EeywObjMZys5cQ" org.eventb.core.target="VaccineSystemContext"/>
+    <org.eventb.core.variable name="_M1uK4ch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="registered"/>
+    <org.eventb.core.variable name="_M1ux8Mh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="administrators"/>
+    <org.eventb.core.variable name="_M1vZAMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="staff"/>
+    <org.eventb.core.variable name="_M1vZAch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="citizens"/>
+    <org.eventb.core.variable name="_M1wAEMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="loggedin"/>
+    <org.eventb.core.variable name="_M1wnIMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="loggedout"/>
+    <org.eventb.core.variable name="_M1xOMMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="passwords"/>
+    <org.eventb.core.variable name="_M1x1QMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="NHSNumbersOfCitizens"/>
+    <org.eventb.core.variable name="_M1x1Qch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="namesOfCitizens"/>
+    <org.eventb.core.variable name="_M1ycUMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="vaccine"/>
+    <org.eventb.core.variable name="_M1zDYMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="batchNo"/>
+    <org.eventb.core.variable name="_M1zqcMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="centers"/>
+    <org.eventb.core.variable name="_M1zqcch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="appointmentsPerDay"/>
+    <org.eventb.core.variable name="_M10RgMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="vaccineStock"/>
+    <org.eventb.core.variable name="_M104kMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="appointments"/>
+    <org.eventb.core.variable name="_M11foMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="centerAppointments"/>
+    <org.eventb.core.variable name="_M11foch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="offers"/>
+    <org.eventb.core.variable name="_M12GsMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="availableDates"/>
+    <org.eventb.core.variable name="_M12twMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="alreadyOffered"/>
+    <org.eventb.core.variable name="_M12twch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="ongoingBooking"/>
+    <org.eventb.core.variable name="_M13U0Mh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="certificate"/>
+    <org.eventb.core.variable name="_M1374Mh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="citizenCertificates"/>
+    <org.eventb.core.variable name="_M14i8Mh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="resultCitizen"/>
+    <org.eventb.core.invariant name="_M14i8ch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="inv23" org.eventb.core.predicate="certificate ⊆ vaccine ⇸ DATE"/>
+    <org.eventb.core.invariant name="_M15xEMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="inv24" org.eventb.core.predicate="citizenCertificates ⊆ certificate → citizens"/>
+    <org.eventb.core.invariant name="_M16YIMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="inv25" org.eventb.core.predicate="resultCitizen = USER"/>
+    <org.eventb.core.event name="_M16_MMh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_M18NUMh8EeywObjMZys5cQ" org.eventb.core.assignment="certificate, citizenCertificates ≔ ∅,∅" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="_M180YMh8EeywObjMZys5cQ" org.eventb.core.assignment="resultCitizen ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act5"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M180Ych8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="UpdateVaccineStock">
+        <org.eventb.core.refinesEvent name="_M19bcMh8EeywObjMZys5cQ" org.eventb.core.target="UpdateVaccineStock"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M19bcch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="addVaccineCentre">
+        <org.eventb.core.refinesEvent name="_M19bcsh8EeywObjMZys5cQ" org.eventb.core.target="addVaccineCentre"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1-CgMh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="startBooking">
+        <org.eventb.core.refinesEvent name="_M1-Cgch8EeywObjMZys5cQ" org.eventb.core.target="startBooking"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1-Cgsh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="RootAdmin">
+        <org.eventb.core.refinesEvent name="_M1-pkMh8EeywObjMZys5cQ" org.eventb.core.target="RootAdmin"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1-pkch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="RegisterAdmin">
+        <org.eventb.core.refinesEvent name="_M1-pksh8EeywObjMZys5cQ" org.eventb.core.target="RegisterAdmin"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1_QoMh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="RegisterCitizen">
+        <org.eventb.core.refinesEvent name="_M1_Qoch8EeywObjMZys5cQ" org.eventb.core.target="RegisterCitizen"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1_Qosh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="RegisterStaff">
+        <org.eventb.core.refinesEvent name="_M1_3sMh8EeywObjMZys5cQ" org.eventb.core.target="RegisterStaff"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M1_3sch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="ChangePassword">
+        <org.eventb.core.refinesEvent name="_M1_3ssh8EeywObjMZys5cQ" org.eventb.core.target="ChangePassword"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2AewMh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="Login">
+        <org.eventb.core.refinesEvent name="_M2Aewch8EeywObjMZys5cQ" org.eventb.core.target="Login"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2Aewsh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="Logout">
+        <org.eventb.core.refinesEvent name="_M2BF0Mh8EeywObjMZys5cQ" org.eventb.core.target="Logout"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2BF0ch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="giveCertificate"/>
+    <org.eventb.core.event name="_M2Bs4Mh8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="administerVaccine">
+        <org.eventb.core.parameter name="_M2Bs4ch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+        <org.eventb.core.parameter name="_M2Bs4sh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.parameter name="_M2CT8Mh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="v"/>
+        <org.eventb.core.parameter name="_M2CT8ch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="d"/>
+        <org.eventb.core.guard name="_M2CT8sh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="s ∈ staff"/>
+        <org.eventb.core.guard name="_M2C7AMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ citizens"/>
+        <org.eventb.core.guard name="_M2C7Ach8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="c ∈ dom(appointments)"/>
+        <org.eventb.core.guard name="_M2DiEMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="v ∈ vaccine"/>
+        <org.eventb.core.guard name="_M2DiEch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="d ∈ DATE"/>
+        <org.eventb.core.guard name="_M2EJIMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd7" org.eventb.core.predicate="appointments(c) = d"/>
+        <org.eventb.core.action name="_M2EJIch8EeywObjMZys5cQ" org.eventb.core.assignment="certificate ≔ certificate ∪ {{ v ↦ d }}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_M2EJIsh8EeywObjMZys5cQ" org.eventb.core.assignment="citizenCertificates ≔ citizenCertificates ∪ {{ {v ↦ d} ↦ c}}" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="_M2EwMMh8EeywObjMZys5cQ" org.eventb.core.assignment="vaccineStock ≔ {v} ⩤ vaccineStock" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2EwMch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="viewCertificate">
+        <org.eventb.core.parameter name="_M2FXQMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.parameter name="_M2FXQch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="result"/>
+        <org.eventb.core.guard name="_M2F-UMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ citizens"/>
+        <org.eventb.core.guard name="_M2F-Uch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="result ∈ certificate"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2F-Ush8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="viewBooking">
+        <org.eventb.core.parameter name="_M2GlYMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.parameter name="_M2GlYch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="result"/>
+        <org.eventb.core.guard name="_M2HMcMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ citizens"/>
+        <org.eventb.core.guard name="_M2HMcch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="result ∈ DATE"/>
+        <org.eventb.core.guard name="_M2HzgMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="appointments(c) = result"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_M2Hzgch8EeywObjMZys5cQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="viewDetails">
+        <org.eventb.core.parameter name="_M2IakMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="member"/>
+        <org.eventb.core.parameter name="_M2Iakch8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.identifier="number"/>
+        <org.eventb.core.guard name="_M2Iaksh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="member ∈ administrators ∪ staff"/>
+        <org.eventb.core.guard name="_M2JBoMh8EeywObjMZys5cQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="number ∈ ℕ"/>
+        <org.eventb.core.action name="_M2JBoch8EeywObjMZys5cQ" org.eventb.core.assignment="resultCitizen ≔ {NHSNumbersOfCitizens(number)}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
