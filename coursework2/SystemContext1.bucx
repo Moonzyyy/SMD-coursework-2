@@ -1,7 +1,0 @@
-context SystemContext1
-sets
-	LOCATION
-	DATE
-	NUM
-	BRAND
-end

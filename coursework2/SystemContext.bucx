@@ -1,5 +1,0 @@
-context SystemContext
-sets
-	USER
-	PASSWORDS
-end
