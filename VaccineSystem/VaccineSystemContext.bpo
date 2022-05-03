@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
-        <org.eventb.core.poIdentifier name="STRING" org.eventb.core.type="ℙ(STRING)"/>
         <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rootPassword" org.eventb.core.type="PASSWORDS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/VaccineSystem/VaccineSystemContext.bpo|org.eventb.core.poFile#VaccineSystemContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/VaccineSystem/VaccineSystemContext.bpo|org.eventb.core.poFile#VaccineSystemContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="root∈USER" org.eventb.core.source="/VaccineSystem/VaccineSystemContext.buc|org.eventb.core.contextFile#VaccineSystemContext|org.eventb.core.axiom#_d4EJMcr7EeybWdzq6Au0CA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rootPassword∈PASSWORDS" org.eventb.core.source="/VaccineSystem/VaccineSystemContext.buc|org.eventb.core.contextFile#VaccineSystemContext|org.eventb.core.axiom#_d4EJMsr7EeybWdzq6Au0CA"/>
+    </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

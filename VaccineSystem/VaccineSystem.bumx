@@ -1,13 +1,18 @@
 machine VaccineSystem
-sees VaccineSystemContext
-
+sees
+	VaccineSystemExt2Context
+	VaccineSystemExtendedContext
+	VaccineSystemContext
+	
 variables
 	registered
 	administrators
 	staff
 	citizens
 	NHSNumbersOfCitizens
+	NHSno
 	namesOfCitizens
+	name
 	loggedin
 	loggedout
 	passwords
@@ -18,46 +23,26 @@ invariants
 	@inv3: staff ⊆ registered
 	@inv4: citizens ⊆ registered
 	@inv5: partition(registered, administrators, staff, citizens)
-	//user can only have one role
-	////@inv5: administrators ∩ staff ∩ citizens = ∅
-	//not sure what this shows
-	////@inv7: administrators ∪ staff ∪ citizens = registered
 	
 	//a set of ordered pairs, only in registered once - function, all registered must be there - total, don't have to be unique (injective), or surjective
 	@inv6: passwords ∈ registered → PASSWORDS
-	
 	@inv8: loggedin ⊆ registered
 	@inv9: loggedout ⊆ registered
 	@inv10: partition(registered, loggedin, loggedout)
-	//@inv10: loggedin ∩ loggedout = ∅
-	
-	//@inv11: NHSNumbersOfCitizens ∈ citizens ↣ ℕ  //citizen only once, all of them --total function..  NHSno must be unique --injective
-	@inv11: NHSNumbersOfCitizens ∈ ℕ ⤀ citizens
-	@inv14: namesOfCitizens ∈ citizens → STRING  //citizen only once, all of them -- total function,,  name can appear any amount of times
+	@inv12: NHSno ⊆ ℕ
+	@inv11: NHSNumbersOfCitizens ∈ NHSno ⤖ citizens  //citizen only once, all of them --total function..  NHSno must be unique --injective
+	@inv13: name ⊆ TEXT
+	@inv14: namesOfCitizens ∈ citizens → name  //citizen only once, all of them -- total function,,  name can appear any amount of times
 
 events
-	//check this - INITIALISATION sets all the variables to empty sets, I have no idea how to add a root user
-	//Update->
 	
 	event INITIALISATION
 	then
-		@act1: registered, staff, citizens, loggedin, loggedout, passwords,administrators, NHSNumbersOfCitizens, namesOfCitizens ≔ ∅,∅,∅,∅, ∅, ∅, ∅, ∅, ∅
-		//update: add an initial administrator so they can do the stuff - like start the events running
-		
-	end
-	
-	//Adds a root administrator
-	event RootAdmin
-	any user password where
-	 	@grd1: administrators = ∅
-	 	@grd2: registered = ∅
-	 	@grd3: user ∈ USER
-	 	@grd4: password ∈ PASSWORDS
-	then
-	 	@act1: registered ≔ registered ∪ {user}
-		@act2: passwords ≔ passwords ∪ {user ↦ password}
-		@act3: administrators ≔ administrators ∪ {user}
-		@act4: loggedout ≔ loggedout ∪ {user}
+		@act1: staff, citizens, loggedin, NHSno, name, NHSNumbersOfCitizens, namesOfCitizens ≔ ∅, ∅, ∅, ∅, ∅, ∅, ∅
+		@act-add-root: administrators ≔ {root}
+		@act-add-root-registered: registered ≔ {root}
+		@act-add-root-loggedout: loggedout ≔ {root}
+		@act-add-root-password: passwords ≔ {root ↦ rootPassword}
 	end
 	
 	//An administrator registers a new administrator and adds there password to the relation
@@ -66,6 +51,7 @@ events
 		@grd1: admin ∈ administrators
 		@grd2: password ∈ PASSWORDS
 		@grd3: user ∈ USER ∖ registered
+		@grd4: admin ∈ loggedin
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
@@ -80,6 +66,7 @@ events
 		@grd2: password ∈ PASSWORDS
 		@grd3: user ∈ USER ∖ registered
 		@grd4: administrators ≠ ∅
+		@grd5: admin ∈ loggedin
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
@@ -87,25 +74,25 @@ events
 		@act4: loggedout ≔ loggedout ∪ {user}
 	end
 	
-	//A citizen can register an account in the system
+	//A citizen can register an account in the system -- has an invariant breach that still needs fixing
 	event RegisterCitizen
 	any user password nam no where
 		@grd1: user ∈ USER
 		@grd2: password ∈ PASSWORDS
 		//can't register twice/have same username
 		@grd3: user ∉ registered
-		@grd4: administrators ≠ ∅
-		@grd5: nam ∈ STRING
+		@grd5: nam ∈ TEXT
 		@grd6: no ∈ ℕ
-		@grd7: no ∉ dom(NHSNumbersOfCitizens)
-		
+		@grd7: no ∉ NHSno
+		@grd8: user ∉ dom(namesOfCitizens)
 	then
 		@act1: registered ≔ registered ∪ {user}
 		@act2: passwords ≔ passwords ∪ {user ↦ password}
 		@act3: citizens ≔ citizens ∪ {user}
 		@act4: loggedout ≔ loggedout ∪ {user}
+		@act4.5: NHSno ≔ NHSno ∪ {no}
 		@act5: NHSNumbersOfCitizens ≔  NHSNumbersOfCitizens ∪ {no ↦ user}
-		@act6: namesOfCitizens ≔  namesOfCitizens ∪ {user ↦ nam}
+		@act6: namesOfCitizens ≔ namesOfCitizens ∪ {user ↦ nam}
 	end
 	
 	//A user changes their password
@@ -113,6 +100,7 @@ events
 	any user password where
 		@grd1: user ∈ registered
 		@grd2: password ∈ PASSWORDS
+		@grd3: user ∈ loggedin
 	then
 		@act1: passwords(user) ≔ password
 	end

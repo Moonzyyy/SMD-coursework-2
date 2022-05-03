@@ -2,11 +2,10 @@ context VaccineSystemContext
 sets
 	USER
 	PASSWORDS
-	STRING
-//constants
-//	root
-
-//axioms
-//	rootUser  USER
-
+constants
+	root
+	rootPassword
+axioms
+	@typeof-root: root ∈ USER
+	@typeof-root-password: rootPassword ∈ PASSWORDS
 end

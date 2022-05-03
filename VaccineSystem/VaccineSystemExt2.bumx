@@ -14,133 +14,125 @@ variables
 	loggedout
 	passwords
 	NHSNumbersOfCitizens
-	//NHSno
+	NHSno
 	namesOfCitizens
-	//name
-	
+	name
 	vaccine
 	batchNo
-	
 	centers
 	appointmentsPerDay
 	vaccineStock
-	
 	appointments
 	centerAppointments
-	
 	offers
 	availableDates
 	alreadyOffered
     ongoingBooking
     
-    
     certificate
     citizenCertificates
     
-    resultCitizen
-    
     
 invariants
-	@inv23: certificate ⊆ vaccine ⇸ DATE // partial function (not every vaccine has to be in a certificate), DATE not injective or surjective
-	@inv24: citizenCertificates ⊆ certificate → citizens  //total function, certifcate once, citizen many
-	@inv25: resultCitizen = USER
+	@inv23: certificate ∈ vaccine ⇸ DATE // partial function, DATE not injective or surjective
+	@inv24: citizenCertificates ∈ certificate → citizens  //total function, certifcate once, citizen many
 	
 events
 
     //Initialises all variables
 	event INITIALISATION extends INITIALISATION
 	then
-		@act4: certificate, citizenCertificates ≔ ∅,∅
-		@act5: resultCitizen ≔ ∅
+		@act5: certificate, citizenCertificates ≔ ∅, ∅
 	end
 	
 	event UpdateVaccineStock extends UpdateVaccineStock
+	where
+		@grd6: a ∈ loggedin
 	end
 	
-	event addVaccineCentre extends addVaccineCentre
+	event AddVaccineCentre extends AddVaccineCentre
+	where
+		@grd4: a ∈ loggedin
 	end
 	
-	event startBooking extends startBooking
-    end
+	event StartBooking extends StartBooking
+	where
+		@grd7: c ∈ loggedin
+	end
 	
-    /*event confirmBooking extends confirmBooking
-    end
+ 	event ConfirmBooking extends ConfirmBooking
+ 	where
+ 		@grd5: c ∈ loggedin
+ 	end
 
-    event rejectBooking extends rejectBooking
-    end
+ 	event RejectBooking extends RejectBooking
+ 	where
+ 		@grd5: c ∈ loggedin
+ 	end
 
-    event abortBooking extends abortBooking
-    end
+ 	event AbortBooking extends AbortBooking
+ 	where
+ 		@grd5: c ∈ loggedin
+ 	end
 
-    event changeBooking extends changeBooking
-    end
-    * 
-    */
+ 	event ChangeBooking extends ChangeBooking
+ 	where
+ 		@grd6: c ∈ loggedin
+ 	end
+  
+ 	event RegisterAdmin extends RegisterAdmin
+	end
+	
+ 	event RegisterCitizen extends RegisterCitizen
+ 	end
+	
+ 	event RegisterStaff extends RegisterStaff
+ 	end
+	
+ 	event ChangePassword extends ChangePassword
+ 	end
+	
+ 	event Login extends Login
+ 	end
+	
+ 	event Logout extends Logout
+ 	end
 
-	event RootAdmin extends RootAdmin
-	end
-	
-	event RegisterAdmin extends RegisterAdmin
-	end
-	
-	event RegisterCitizen extends RegisterCitizen
-	end
-	
-	event RegisterStaff extends RegisterStaff
-	end
-	
-	event ChangePassword extends ChangePassword
-	end
-	
-	event Login extends Login
-	end
-	
-	event Logout extends Logout
-	end
-
-  	
-	
-	event giveCertificate
-	end
-
- 	event administerVaccine
-  	any s c v d where
+  	event AdministerVaccine
+  	any s c v date where
   		@grd1: s ∈ staff
   		@grd2: c ∈ citizens
   		@grd3: c ∈ dom(appointments)
   		//Possible date guard
   		@grd5: v ∈ vaccine
-  		@grd6: d ∈ DATE
-  		@grd7: appointments(c) = d
+  		@grd6: date ∈ DATE
+  		@grd7: appointments(c) = date
   	then
-  		@act1: certificate ≔ certificate ∪ {{ v ↦ d }}
-  		@act2: citizenCertificates ≔ citizenCertificates ∪ {{ {v ↦ d} ↦ c}}
-  		@act3: vaccineStock ≔  {v} ⩤ vaccineStock
+  		@act1: certificate ≔ {v ↦ date}
+  		@act2: vaccineStock ≔  {v} ⩤ vaccineStock
 	end
 	
 
-	event viewCertificate
+	event ViewCertificate
 	any c result where
 		@grd1: c ∈ citizens
 		@grd2: result ∈ certificate
-		
+		@grd3: citizenCertificates(result) = c
 	end	
 	
-	event viewBooking 
+	event ViewBooking 
 	any c result where 
 	 	@grd1: c ∈ citizens
 	 	@grd2: result ∈ DATE
 	 	@grd3: appointments(c) = result
 	end 
 	
-	event viewDetails
-	any member number where
+	event ViewDetails
+	any member number result where
 		@grd1: member ∈ administrators ∪ staff
-		@grd2: number ∈ ℕ
-	then
-		@act1: resultCitizen ≔ {NHSNumbersOfCitizens(number)}
-	end
-
-
+		@grd2: number ∈  NHSno
+		@grd4: result ∈ citizens
+		@grd3: result = NHSNumbersOfCitizens(number)
+	end	
 end
 	
