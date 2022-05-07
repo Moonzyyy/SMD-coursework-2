@@ -1,0 +1,134 @@
+machine m2
+refines m1
+sees c0 c1 c2
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+	NHSNumbersOfCitizens
+	NHSno
+	namesOfCitizens
+	centers
+	bookedAppointments
+	appointments
+	availibleAppointmentsPerCenter
+	availibleAppointments
+	vaccine
+	vaccineStock
+	booking
+	offers
+	rejected
+	
+	//new variables
+	certificates
+	certificatesToCitizens
+	
+invariants
+	@inv25: certificates ∈ vaccine ⇸ DATE
+	@inv26: certificatesToCitizens ∈ certificates → citizens
+	
+events
+	event INITIALISATION extends INITIALISATION
+	then
+		@act3: certificates, certificatesToCitizens ≔ ∅, ∅
+	end
+
+	event RegisterAdmin extends RegisterAdmin
+	end
+
+	event RegisterCitizen extends RegisterCitizen
+	end
+
+	event RegisterStaff extends RegisterStaff
+	end
+
+	event ChangePassword extends ChangePassword
+	end
+
+	event Login extends Login
+	end
+
+	event Logout extends Logout
+	end
+
+	event AddVaccineCentre extends AddVaccineCentre
+	end
+
+	event UpdateVaccineStock extends UpdateVaccineStock
+	end
+
+	event AddAvailibleAppointment extends AddAvailibleAppointment
+	end
+
+	event StartBooking extends StartBooking
+	end
+
+	event ConfirmBooking extends ConfirmBooking
+	end
+
+	event RejectBooking extends RejectBooking
+	end
+
+	event RejectAndAbort extends RejectAndAbort
+	end
+
+	event AbortBooking extends AbortBooking
+	end
+
+	event StartRebooking extends StartRebooking
+	end
+	
+	event UpdateCertificate
+	any c d center s v where
+		@grd1: c ∈ citizens
+		@grd2: d ∈ DATE
+		@grd3: center ∈ centers
+		@grd4: s ∈ staff
+		@grd5: v ∈ vaccine
+		@grd6: ((c ↦ d) ↦ center) ∈ bookedAppointments
+		@grd7: s ∈ loggedin
+		@grd8: (v ↦ center) ∈ vaccineStock
+		@grd9: (v ↦ d) ∉ certificates
+		@grd10: ((v ↦ d) ↦ c) ∉ certificatesToCitizens
+	then
+		@act1: vaccineStock ≔ vaccineStock ∖ {v ↦ center}
+		@act2: certificates ≔ certificates ∪ {v ↦ d}
+		@act3: certificatesToCitizens ≔ certificatesToCitizens ∪ {(v ↦ d) ↦ c}
+		@act4: bookedAppointments ≔ bookedAppointments ∖ {(c ↦ d) ↦ center}
+		@act5: appointments ≔ appointments ∖ {c ↦ d}
+	end
+
+	event ViewDetails
+	any num s result name where
+		@grd1: s ∈ administrators ∪ staff
+		@grd2: s ∈ loggedin
+		@grd3: num ∈  NHSno
+		@grd4: result ∈ citizens
+		@grd5: result = NHSNumbersOfCitizens(num)
+		@grd6: name ∈ TEXT
+		@grd7: name = namesOfCitizens(result)
+	end
+	
+	event ViewBooking
+	any c date center where
+		@grd1: date ∈ DATE
+		@grd2: center ∈ centers
+		@grd3: c ∈ citizens
+		@grd4: c ∈ loggedin
+		@grd5: c ∈ dom(appointments)
+		@grd6: date = appointments(c)
+		@grd7: center = bookedAppointments(c ↦ date)
+	end
+	
+	event ViewCertificates
+	any c result where
+		@grd1: c ∈ citizens
+		@grd2: c ∈ loggedin
+		@grd3: result ⊆ certificates
+		@grd4: result = dom(certificatesToCitizens ▷ {c})
+	end
+end

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rootPassword" org.eventb.core.type="PASSWORDS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/NHSVaccineSystem/c0.bpo|org.eventb.core.poFile#c0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="root∈USER" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39IThM3uEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rootPassword∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39I6kM3uEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

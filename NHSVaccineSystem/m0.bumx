@@ -1,0 +1,116 @@
+machine m0
+sees
+	c0
+	c1
+	c2
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+
+invariants
+	@inv1: registered ⊆ USER
+	@inv2: administrators ⊆ registered
+	@inv3: staff ⊆ registered
+	@inv4: citizens ⊆ registered
+	@inv5: partition(registered, administrators, staff, citizens)
+	
+	//a set of ordered pairs, only in registered once - function, all registered must be there - total, don't have to be unique (injective), or surjective
+	@inv6: passwords ∈ registered → PASSWORDS
+	@inv8: loggedin ⊆ registered
+	@inv9: loggedout ⊆ registered
+	@inv10: partition(registered, loggedin, loggedout)
+
+
+events
+	
+	event INITIALISATION
+	then
+		@act1: staff, citizens, loggedin ≔ ∅, ∅, ∅
+		@act-add-root: administrators ≔ {root}
+		@act-add-root-registered: registered ≔ {root}
+		@act-add-root-loggedout: loggedout ≔ {root}
+		@act-add-root-password: passwords ≔ {root ↦ rootPassword}
+	end
+	
+	//An administrator registers a new administrator and adds there password to the relation
+	event RegisterAdmin
+	any admin user password where
+		@grd1: admin ∈ administrators
+		@grd2: password ∈ PASSWORDS
+		@grd3: user ∈ USER ∖ registered
+		@grd4: admin ∈ loggedin
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: administrators ≔ administrators ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+	
+	//An administrator registers a new staff member and adds there password to the relation
+	event RegisterStaff
+	any admin user password where
+		@grd1: admin ∈ administrators
+		@grd2: password ∈ PASSWORDS
+		@grd3: user ∈ USER ∖ registered
+		@grd4: administrators ≠ ∅
+		@grd5: admin ∈ loggedin
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: staff ≔ staff ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+	
+	//A citizen can register an account in the system -- has an invariant breach that still needs fixing
+	event RegisterCitizen
+	any user password where
+		@grd1: user ∈ USER
+		@grd2: password ∈ PASSWORDS
+		//can't register twice/have same username
+		@grd3: user ∉ registered
+	then
+		@act1: registered ≔ registered ∪ {user}
+		@act2: passwords ≔ passwords ∪ {user ↦ password}
+		@act3: citizens ≔ citizens ∪ {user}
+		@act4: loggedout ≔ loggedout ∪ {user}
+	end
+	
+	//A user changes their password
+	event ChangePassword
+	any user password where
+		@grd1: user ∈ registered
+		@grd2: password ∈ PASSWORDS
+		@grd3: user ∈ loggedin
+	then
+		@act1: passwords(user) ≔ password
+	end
+	
+	//A user logs into the system
+	event Login
+	any user password where
+		@grd1: user ∈ registered
+		@grd2: user ∈ loggedout
+		@grd3: password ∈ PASSWORDS
+		
+		//is this something we can do?       
+		@grd4: passwords(user) = password
+	then
+		@act1: loggedin ≔ loggedin ∪ {user}
+		@act2: loggedout ≔ loggedout ∖ {user}
+	end
+	
+	//A user logs out of the system
+	event Logout
+	any user where
+		@grd1: user ∈ registered
+		@grd2: user ∈ loggedin
+	then
+		@act1: loggedout ≔ loggedout ∪ {user}
+		@act2: loggedin ≔ loggedin ∖ {user}
+	end
+end

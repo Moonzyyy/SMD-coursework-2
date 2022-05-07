@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rootPassword" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poPredicate name="rootPasswore" org.eventb.core.predicate="root∈USER" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39IThM3uEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="rootPassworf" org.eventb.core.predicate="rootPassword∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39I6kM3uEeyULpBfgIBIxg"/>
+        <org.eventb.core.poIdentifier name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.poIdentifier name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+        <org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.poIdentifier name="batchNo" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="rootPassworg" org.eventb.core.predicate="batchNo⊆ℕ" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_IKmntM3vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poIdentifier name="TEXT" org.eventb.core.type="ℙ(TEXT)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+        <org.eventb.core.poIdentifier name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{root}⊆{root}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆{root}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆{root}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition({root},{root},∅ ⦂ ℙ(USER),∅ ⦂ ℙ(USER))" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{root ↦ rootPassword}∈{root} → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆{root}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{root}⊆{root}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratort"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition({root},∅ ⦂ ℙ(USER),{root})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOM0M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratort" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="administrators'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratort" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratort" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},administrators∪{user},staff,citizens)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterAdmin/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},loggedin,loggedout∪{user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterAdmin\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratoru" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="administrators'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratoru" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratoru" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5s33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="admin∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmPa8M33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="RegisterStaff/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},administrators,staff∪{user},citizens)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterStaff/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},loggedin,loggedout∪{user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterStaff\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorv" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorv" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratorv" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQCA833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="administrators≠(∅ ⦂ ℙ(USER))" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="admin∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpE833EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="administrators⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="staff⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="citizens∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},administrators,staff,citizens∪{user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords∪{user ↦ password}∈registered∪{user} → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered∪{user}" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered∪{user},loggedin,loggedout∪{user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#RegisterCitizen\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorw" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorw" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratorw" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈USER" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3MM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3Mc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∉registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3Ms33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ChangePassword/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passwords{user ↦ password}∈registered → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#ChangePassword\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorx" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorx" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratorx" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmSeRM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmTFUM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmTFUc33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Login/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPadministratory)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user∈dom(passwords)∧passwords∈USER ⇸ PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsZM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsZM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPadministratory)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin∪{user}⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Login\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout ∖ {user}⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Login\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Login/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratory"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered,loggedin∪{user},loggedout ∖ {user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Login\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratory" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPadministratory)" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratory" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsYc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedout" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsYs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsY833EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratory" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTHYPadministratory)" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="passwords(user)=password" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsZM33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Logout/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedin ∖ {user}⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Logout\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Logout/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="loggedout∪{user}⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Logout\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Logout/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPadministratorz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(registered,loggedin ∖ {user},loggedout∪{user})" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#Logout\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTadministratorz" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPadministratorz" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTadministratorz" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmU6gM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmU6gc33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(registered,administrators,staff,citizens)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="passwords∈registered → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="partition(registered,loggedin,loggedout)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

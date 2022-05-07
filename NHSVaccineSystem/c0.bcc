@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="typeof-root" org.eventb.core.predicate="root∈USER" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39IThM3uEeyULpBfgIBIxg" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="typeof-root-password" org.eventb.core.predicate="rootPassword∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39I6kM3uEeyULpBfgIBIxg" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="root" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#_39ITgs3uEeyULpBfgIBIxg" org.eventb.core.type="USER"/>
+    <org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#_39ITgM3uEeyULpBfgIBIxg" org.eventb.core.type="ℙ(USER)"/>
+    <org.eventb.core.scConstant name="rootPassword" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#_39ITg83uEeyULpBfgIBIxg" org.eventb.core.type="PASSWORDS"/>
+    <org.eventb.core.scCarrierSet name="PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#_39ITgc3uEeyULpBfgIBIxg" org.eventb.core.type="ℙ(PASSWORDS)"/>
+</org.eventb.core.scContextFile>

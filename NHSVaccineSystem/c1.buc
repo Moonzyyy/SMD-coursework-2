@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_IKmnsM3vEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="LOCATION"/>
+    <org.eventb.core.carrierSet name="_IKmnsc3vEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="DATE"/>
+    <org.eventb.core.carrierSet name="_IKmnss3vEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="BRAND"/>
+    <org.eventb.core.constant name="_IKmns83vEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="batchNo"/>
+    <org.eventb.core.axiom name="_IKmntM3vEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.label="batch-no" org.eventb.core.predicate="batchNo ⊆ ℕ"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="51">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="PASSWORDS" org.eventb.core.type="ℙ(PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rootPassword" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poPredicate name="rootPasswore" org.eventb.core.predicate="root∈USER" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39IThM3uEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="rootPassworf" org.eventb.core.predicate="rootPassword∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#_39I6kM3uEeyULpBfgIBIxg"/>
+        <org.eventb.core.poIdentifier name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.poIdentifier name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+        <org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+        <org.eventb.core.poIdentifier name="batchNo" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="rootPassworg" org.eventb.core.predicate="batchNo⊆ℕ" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_IKmntM3vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poIdentifier name="TEXT" org.eventb.core.type="ℙ(TEXT)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="21">
+        <org.eventb.core.poIdentifier name="citizens" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="bookedAppointments" org.eventb.core.type="ℙ(USER×DATE×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="availibleAppointmentsPerCenter" org.eventb.core.type="ℙ(LOCATION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="vaccineStock" org.eventb.core.type="ℙ(BRAND×ℤ×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="centers" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.poIdentifier name="namesOfCitizens" org.eventb.core.type="ℙ(USER×TEXT)"/>
+        <org.eventb.core.poIdentifier name="passwords" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+        <org.eventb.core.poIdentifier name="appointments" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="loggedin" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="availibleAppointments" org.eventb.core.type="ℙ(LOCATION×DATE)"/>
+        <org.eventb.core.poIdentifier name="NHSNumbersOfCitizens" org.eventb.core.type="ℙ(ℤ×USER)"/>
+        <org.eventb.core.poIdentifier name="booking" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="staff" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="NHSno" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="certificatesToCitizens" org.eventb.core.type="ℙ(BRAND×ℤ×DATE×USER)"/>
+        <org.eventb.core.poIdentifier name="administrators" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="certificates" org.eventb.core.type="ℙ(BRAND×ℤ×DATE)"/>
+        <org.eventb.core.poIdentifier name="vaccine" org.eventb.core.type="ℙ(BRAND×ℤ)"/>
+        <org.eventb.core.poIdentifier name="loggedout" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="rejected" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentes" org.eventb.core.predicate="registered⊆USER" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentet" org.eventb.core.predicate="administrators⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-sc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCenteu" org.eventb.core.predicate="staff⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-ss33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentev" org.eventb.core.predicate="citizens⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-s833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentew" org.eventb.core.predicate="partition(registered,administrators,staff,citizens)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmM-tM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentex" org.eventb.core.predicate="passwords∈registered → PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentey" org.eventb.core.predicate="loggedin⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlwc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentez" org.eventb.core.predicate="loggedout⊆registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlws33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCente{" org.eventb.core.predicate="partition(registered,loggedin,loggedout)" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#_hmNlw833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCente|" org.eventb.core.predicate="NHSno⊆ℕ" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNDPpc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCente}" org.eventb.core.predicate="NHSNumbersOfCitizens∈NHSno ⤖ citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNDPps4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCente~" org.eventb.core.predicate="namesOfCitizens∈citizens → TEXT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2sM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf'" org.eventb.core.predicate="centers⊆LOCATION" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2sc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf(" org.eventb.core.predicate="appointments∈citizens ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2ss4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf)" org.eventb.core.predicate="bookedAppointments∈appointments → centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2s84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf*" org.eventb.core.predicate="vaccine∈BRAND ↔ batchNo" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2tM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf+" org.eventb.core.predicate="vaccineStock∈vaccine → centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FND2tc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf," org.eventb.core.predicate="availibleAppointmentsPerCenter∈centers → ℕ" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNEdwM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf-" org.eventb.core.predicate="booking⊆citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNEdwc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf." org.eventb.core.predicate="availibleAppointments∈centers ↔ DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNEdws4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf/" org.eventb.core.predicate="offers∈booking ⇸ availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNEdw84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="availibleAppointmentsPerCentf0" org.eventb.core.predicate="rejected∈booking ↔ availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#_FNEdxM4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv25/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentes"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BRAND×ℤ×DATE))∈(∅ ⦂ ℙ(BRAND×ℤ)) ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE0M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvZAJc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#INITIALISATION\/inv25\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv26/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentes"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BRAND×ℤ×DATE×USER))∈(∅ ⦂ ℙ(BRAND×ℤ×DATE)) → (∅ ⦂ ℙ(USER))" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE0M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvZAJc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#INITIALISATION\/inv26\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentes" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="20">
+        <org.eventb.core.poIdentifier name="vaccineStock'" org.eventb.core.type="ℙ(BRAND×ℤ×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="NHSNumbersOfCitizens'" org.eventb.core.type="ℙ(ℤ×USER)"/>
+        <org.eventb.core.poIdentifier name="availibleAppointmentsPerCenter'" org.eventb.core.type="ℙ(LOCATION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="availibleAppointments'" org.eventb.core.type="ℙ(LOCATION×DATE)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="bookedAppointments'" org.eventb.core.type="ℙ(USER×DATE×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="vaccine'" org.eventb.core.type="ℙ(BRAND×ℤ)"/>
+        <org.eventb.core.poIdentifier name="rejected'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="NHSno'" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="administrators'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="certificates'" org.eventb.core.type="ℙ(BRAND×ℤ×DATE)"/>
+        <org.eventb.core.poIdentifier name="certificatesToCitizens'" org.eventb.core.type="ℙ(BRAND×ℤ×DATE×USER)"/>
+        <org.eventb.core.poIdentifier name="centers'" org.eventb.core.type="ℙ(LOCATION)"/>
+        <org.eventb.core.poIdentifier name="namesOfCitizens'" org.eventb.core.type="ℙ(USER×TEXT)"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentes" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentes" org.eventb.core.poStamp="20"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentet" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="administrators'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentet" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentet" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5M33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5c33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmOz5s33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="admin∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmOz4M33EeyULpBfgIBIxg|org.eventb.core.guard#_hmPa8M33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv26/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCenteu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="certificatesToCitizens∈certificates → citizens∪{user}" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE1M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvZnMs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#RegisterCitizen\/inv26\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCenteu" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="NHSNumbersOfCitizens'" org.eventb.core.type="ℙ(ℤ×USER)"/>
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="no" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="NHSno'" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="nam" org.eventb.core.type="TEXT"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="namesOfCitizens'" org.eventb.core.type="ℙ(USER×TEXT)"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCenteu" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCenteu" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈USER" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3MM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3Mc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∉registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmRQIs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmR3Ms33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="nam∈TEXT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE1M4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNFr4c4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="no∈ℕ" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE1M4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNFr4s4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="no∉NHSno" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNFE1M4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNFr484qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentev" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentev" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentev" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="admin∈administrators" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQCA833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈USER ∖ registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="administrators≠(∅ ⦂ ℙ(USER))" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpEs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="admin∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmPa9c33EeyULpBfgIBIxg|org.eventb.core.guard#_hmQpE833EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentew" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+        <org.eventb.core.poIdentifier name="passwords'" org.eventb.core.type="ℙ(USER×PASSWORDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentew" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentew" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmSeRM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmTFUM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmSeQc33EeyULpBfgIBIxg|org.eventb.core.guard#_hmTFUc33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentex" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="password" org.eventb.core.type="PASSWORDS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentex" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentex" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsYc33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedout" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsYs33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="password∈PASSWORDS" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsY833EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="passwords(user)=password" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmTFU833EeyULpBfgIBIxg|org.eventb.core.guard#_hmTsZM33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentey" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="loggedout'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="loggedin'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentey" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentey" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmU6gM33EeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="user∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#_hmUTcs33EeyULpBfgIBIxg|org.eventb.core.guard#_hmU6gc33EeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentez" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="availibleAppointmentsPerCenter'" org.eventb.core.type="ℙ(LOCATION×ℤ)"/>
+        <org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="location" org.eventb.core.type="LOCATION"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="centers'" org.eventb.core.type="ℙ(LOCATION)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentez" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentez" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="location∉centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNG6Ac4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNG6Bc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈ℕ" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNG6Ac4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNG6Bs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNG6Ac4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNHhEM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNG6Ac4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNHhEc4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="UpdateVaccineStock/inv25/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCente{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="certificates∈vaccine∪{b ↦ no} ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvaOR84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateVaccineStock\/inv25\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCente{" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="vaccineStock'" org.eventb.core.type="ℙ(BRAND×ℤ×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BRAND"/>
+        <org.eventb.core.poIdentifier name="no" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="LOCATION"/>
+        <org.eventb.core.poIdentifier name="vaccine'" org.eventb.core.type="ℙ(BRAND×ℤ)"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCente{" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCente{" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIIJM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b∈BRAND" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIIJc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="no∈batchNo" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIIJs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b ↦ no∉vaccine" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIvMM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIvMc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="a∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNHhFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNIvMs4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCente|" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="availibleAppointments'" org.eventb.core.type="ℙ(LOCATION×DATE)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="LOCATION"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCente|" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCente\|" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNJWQc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNJWRc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="d∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNJWQc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNJ9UM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c ↦ d∉availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNJWQc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNJ9Uc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="a∈administrators" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNJWQc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNJ9Us4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="a∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNJWQc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNJ9U84qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCente}" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCente}" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCente}" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLLcc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLLcs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLLc84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLLdM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c∉booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLygM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c∉dom(appointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLygc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="center ↦ date∈availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLygs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="center ↦ date∉ran(offers)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNKkYc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNLyg84qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCente~" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="availibleAppointments'" org.eventb.core.type="ℙ(LOCATION×DATE)"/>
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="bookedAppointments'" org.eventb.core.type="ℙ(USER×DATE×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCente~" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCente~" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNAoc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNAos4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNAo84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNApM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNnsM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c ↦ (center ↦ date)∈offers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNnsc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c∉dom(appointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNnss4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="c ↦ date∈dom(bookedAppointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNNns84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="center ↦ date∉ran(offers)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNMZks4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNOOwM4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf'" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rejected'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf'" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf'" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNPc4M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNPc4c4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNPc4s4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNPc484qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNPc5M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c ↦ (center ↦ date)∉rejected" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQD8M4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c∉dom(appointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQD8c4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="center ↦ date∈availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQD8s4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="center ↦ date∉ran(offers)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQD884qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="c∈dom(offers)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNO10c4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQD9M4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf(" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rejected'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf(" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf(" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNQrAc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQrA84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNQrAc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQrBM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNQrAc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNQrBc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀a⦂LOCATION×DATE·a∈availibleAppointments∧c ↦ a∉offers⇒c ↦ a∈rejected" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNQrAc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNRSEM4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf)" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="rejected'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf)" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf)" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNRSFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNRSFs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNRSFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNR5IM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNRSFM4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNR5Ic4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf*" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="currentDate" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="availibleAppointments'" org.eventb.core.type="ℙ(LOCATION×DATE)"/>
+        <org.eventb.core.poIdentifier name="oldCenter" org.eventb.core.type="LOCATION"/>
+        <org.eventb.core.poIdentifier name="oldDate" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="bookedAppointments'" org.eventb.core.type="ℙ(USER×DATE×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(USER)"/>
+        <org.eventb.core.poIdentifier name="offers'" org.eventb.core.type="ℙ(USER×(LOCATION×DATE))"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf*" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf*" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNSgNc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNSgNs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNSgN84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHQM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="oldDate∈DATE" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHQc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c ↦ oldDate∈dom(bookedAppointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHQs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c∉booking" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHQ84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="c∈dom(appointments)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHRM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="center ↦ date∈availibleAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTHRc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="center ↦ date∉ran(offers)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuUM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="c ↦ date∈appointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuUc4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="c ↦ date ↦ center∉bookedAppointments" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuUs4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="oldCenter∈centers" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuU84qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="oldCenter=bookedAppointments(c ↦ oldDate)" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuVM4qEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="currentDate≠oldDate" org.eventb.core.source="/NHSVaccineSystem/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#_FNR5Jc4qEeyULpBfgIBIxg|org.eventb.core.guard#_FNTuVc4qEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="UpdateCertificate/inv25/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="certificates∪{v ↦ d}∈vaccine ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateCertificate\/inv25\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="UpdateCertificate/inv26/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="certificatesToCitizens∪{v ↦ d ↦ c}∈certificates∪{v ↦ d} → citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateCertificate\/inv26\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="UpdateCertificate/bookedAppointments/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bookedAppointments ∖ {c ↦ d ↦ center}=bookedAppointments" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.action#_JvdRk84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateCertificate\/bookedAppointments\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="UpdateCertificate/vaccineStock/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vaccineStock ∖ {v ↦ center}=vaccineStock" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.action#_JvdRkM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateCertificate\/vaccineStock\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="UpdateCertificate/appointments/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPavailibleAppointmentsPerCentf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointments ∖ {c ↦ d}=appointments" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.action#_JvdRlM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poSequent#UpdateCertificate\/appointments\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf+" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="vaccineStock'" org.eventb.core.type="ℙ(BRAND×ℤ×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="bookedAppointments'" org.eventb.core.type="ℙ(USER×DATE×LOCATION)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="v" org.eventb.core.type="BRAND×ℤ"/>
+        <org.eventb.core.poIdentifier name="appointments'" org.eventb.core.type="ℙ(USER×DATE)"/>
+        <org.eventb.core.poIdentifier name="s" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="certificates'" org.eventb.core.type="ℙ(BRAND×ℤ×DATE)"/>
+        <org.eventb.core.poIdentifier name="certificatesToCitizens'" org.eventb.core.type="ℙ(BRAND×ℤ×DATE×USER)"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf+" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf+" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvcDdM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="d∈DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvcDdc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvcDds4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="s∈staff" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvcqgM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="v∈vaccine" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvcqgc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c ↦ d ↦ center∈bookedAppointments" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvcqgs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="s∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvcqg84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="v ↦ center∈vaccineStock" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvcqhM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="v ↦ d∉certificates" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvcqhc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="v ↦ d ↦ c∉certificatesToCitizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvbcZs4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvcqhs4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ViewDetails/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,*"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="num∈dom(NHSNumbersOfCitizens)∧NHSNumbersOfCitizens∈ℤ ⇸ USER" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvefsM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvefsM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,*"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="ViewDetails/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="result∈dom(namesOfCitizens)∧namesOfCitizens∈USER ⇸ TEXT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvefss4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvefss4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,,"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf," org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="result" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="name" org.eventb.core.type="TEXT"/>
+        <org.eventb.core.poIdentifier name="s" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="num" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPavailibleAppointmentsPerCentf,*" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf," org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈administrators∪staff" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvd4pM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="s∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvd4pc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="num∈NHSno" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvd4ps4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="result∈citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvd4p84vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPavailibleAppointmentsPerCentf,," org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,*" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="result=NHSNumbersOfCitizens(num)" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvefsM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="name∈TEXT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvefsc4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf," org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf,," org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="name=namesOfCitizens(result)" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_JvdRlc4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvefss4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ViewBooking/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c∈dom(appointments)∧appointments∈USER ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGxs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGxs4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-+"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="ViewBooking/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c ↦ date∈dom(bookedAppointments)∧bookedAppointments∈USER × DATE ⇸ LOCATION" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft0M4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft0M4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-,"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf-" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+        <org.eventb.core.poIdentifier name="center" org.eventb.core.type="LOCATION"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPavailibleAppointmentsPerCentf-+" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf-" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="date∈DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGwc4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="center∈centers" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGws4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGw84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGxM4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c∈dom(appointments)" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGxc4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPavailibleAppointmentsPerCentf-," org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-+" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="date=appointments(c)" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_JvfGxs4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf-" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTHYPavailibleAppointmentsPerCentf-," org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="center=bookedAppointments(c ↦ date)" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvefs84vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft0M4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTavailibleAppointmentsPerCentf." org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poIdentifier name="result" org.eventb.core.type="ℙ(BRAND×ℤ×DATE)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USER"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPavailibleAppointmentsPerCentf." org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTavailibleAppointmentsPerCentf." org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvft0c4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft1M4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈loggedin" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvft0c4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft1c4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="result⊆certificates" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvft0c4vEeyULpBfgIBIxg|org.eventb.core.guard#_Jvft1s4vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="result=dom(certificatesToCitizens ▷ {c})" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#_Jvft0c4vEeyULpBfgIBIxg|org.eventb.core.guard#_JvgU4M4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/NHSVaccineSystem/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="51">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="certificates∈vaccine ⇸ DATE" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAI84vEeyULpBfgIBIxg"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="certificatesToCitizens∈certificates → citizens" org.eventb.core.source="/NHSVaccineSystem/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#_JvZAJM4vEeyULpBfgIBIxg"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

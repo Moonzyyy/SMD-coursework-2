@@ -1,0 +1,223 @@
+machine m1
+refines m0
+sees
+	c0
+	c1
+	c2
+variables
+	registered
+	administrators
+	staff
+	citizens
+	loggedin
+	loggedout
+	passwords
+	
+	//New variables
+	NHSNumbersOfCitizens
+	NHSno
+	namesOfCitizens
+	centers
+	bookedAppointments
+	appointments
+	availibleAppointmentsPerCenter
+	availibleAppointments
+	vaccine
+	vaccineStock
+	booking
+	offers
+	rejected
+	
+invariants
+	@inv11: NHSno ⊆ ℕ
+	@inv12: NHSNumbersOfCitizens ∈ NHSno ⤖ citizens  //citizen only once, all of them --total function..  NHSno must be unique --injective
+	@inv14: namesOfCitizens ∈ citizens → TEXT  //citizen only once, all of them -- total function,,  name can appear any amount of times
+	@inv15: centers ⊆ LOCATION 
+	@inv16: appointments ∈ citizens ⇸ DATE
+	@inv17: bookedAppointments ∈ appointments → centers
+	@inv18: vaccine ∈ BRAND ↔ batchNo
+	@inv19: vaccineStock ∈ vaccine → centers
+	@inv20: availibleAppointmentsPerCenter ∈ centers → ℕ
+	@inv21: booking ⊆ citizens
+	@inv22: availibleAppointments ∈ centers ↔ DATE
+	@inv23: offers ∈ booking ⇸ availibleAppointments
+	@inv24: rejected ∈ booking ↔ availibleAppointments
+
+events
+	//Initialises all variables
+	event INITIALISATION extends INITIALISATION
+	then
+		@act2: centers, NHSno, NHSNumbersOfCitizens, namesOfCitizens, appointments,
+		 bookedAppointments, vaccine, vaccineStock,
+		  availibleAppointmentsPerCenter, booking, offers, availibleAppointments, rejected ≔ ∅, ∅ ,∅, ∅, ∅, ∅, ∅, ∅, ∅, ∅, ∅, ∅, ∅
+	end
+	
+	event RegisterAdmin extends RegisterAdmin
+	end
+	
+	event RegisterCitizen extends RegisterCitizen
+	any nam no where
+		@grd4: nam ∈ TEXT
+		@grd5: no ∈ ℕ
+		@grd6: no ∉ NHSno
+	then
+		@act6: NHSno ≔ NHSno ∪ {no}
+		@act7: NHSNumbersOfCitizens ≔  NHSNumbersOfCitizens ∪ {no ↦ user}
+		@act8: namesOfCitizens ≔ namesOfCitizens ∪ {user ↦ nam}
+	end
+	
+	event RegisterStaff extends RegisterStaff
+	end
+	
+	event ChangePassword extends ChangePassword
+	end
+	
+	event Login extends Login
+	end
+	
+	event Logout extends Logout
+	end
+	
+	//Creates a new vaccine center
+	event AddVaccineCentre
+	any location n a where
+		@grd1: location ∉ centers
+		@grd2: n ∈ ℕ
+		@grd3: a ∈ administrators
+		@grd4: a ∈ loggedin
+	then
+		@act1: centers ≔ centers ∪ {location}
+		@act2: availibleAppointmentsPerCenter ≔ availibleAppointmentsPerCenter ∪ {location ↦ n}
+	end
+	
+	
+	//Creates a new vaccine batch
+	event UpdateVaccineStock
+	any c b no a where
+		@grd1: c ∈ centers
+		@grd2: b ∈ BRAND
+		@grd3: no ∈ batchNo
+		@grd4: (b ↦ no) ∉ vaccine
+		@grd6: a ∈ administrators
+		@grd7: a ∈ loggedin
+	then
+		@act1: vaccine ≔ vaccine ∪ {b ↦ no}
+		@act2: vaccineStock ≔ vaccineStock ∪ {((b ↦ no) ↦ c)}
+	end
+	
+	event AddAvailibleAppointment
+	any c d a where
+		@grd1: c ∈ centers
+		@grd2: d ∈ DATE
+		@grd3: (c ↦ d) ∉ availibleAppointments
+		@grd4: a ∈ administrators
+		@grd5: a ∈ loggedin
+	then
+		@act1: availibleAppointments ≔ availibleAppointments ∪ {c ↦ d}
+	end
+	
+	//starts an appointment booking for a citizen
+	event StartBooking
+	any c center date where
+		@grd1: c ∈ citizens
+		@grd2: c ∈ loggedin
+		@grd3: center ∈ centers
+		@grd4: date ∈ DATE
+		@grd5: c ∉ booking
+		@grd6: c ∉ dom(appointments)
+		@grd7: (center ↦ date) ∈ availibleAppointments
+		@grd8: (center ↦ date) ∉ ran(offers)
+		//find a way to make sure there can't be more than the number of appointments per day booked for a center
+	then
+		@act1: booking ≔ booking ∪ {c}
+		@act2: offers ≔ offers ∪ {c ↦ (center ↦ date)}
+  	end
+	
+	//Confirms the booking of an offered appointment
+  	event ConfirmBooking
+  	any c center date where
+  		@grd1: c ∈ citizens
+  		@grd2: c ∈ loggedin
+  		@grd3: c ∈ booking
+  		@grd4: center ∈ centers
+  		@grd5: date ∈ DATE
+  		@grd6: (c ↦ (center ↦ date)) ∈ offers
+  		@grd7: c ∉ dom(appointments)
+  		@grd8: (c ↦ date) ∈ dom(bookedAppointments)
+  		@grd9: (center ↦ date) ∉ ran(offers)
+  	then
+  		@act1: appointments ≔ appointments ∪ {c ↦ date}
+  		@act2: bookedAppointments ≔ bookedAppointments ∪ {(c ↦ date) ↦ center}
+  		@act3: booking ≔ booking ∖ {c}
+  		@act4: offers ≔ {c} ⩤ offers
+  		@act5: availibleAppointments ≔ availibleAppointments ∖ {center ↦ date}
+  	end
+
+	//The citizen rejects an offered booking
+  	event RejectBooking
+  	any c center date where
+  		@grd1: c ∈ citizens
+  		@grd2: c ∈ loggedin
+  		@grd3: c ∈ booking
+  		@grd4: center ∈ centers
+  		@grd5: date ∈ DATE
+  		@grd6: (c ↦ (center ↦ date)) ∉ rejected
+  		@grd7: c ∉ dom(appointments)
+		@grd8: (center ↦ date) ∈ availibleAppointments
+		@grd9: (center ↦ date) ∉ ran(offers)
+		@grd10: c ∈ dom(offers)
+  	then
+  		@act1: rejected ≔ rejected ∪ {c ↦ offers(c)}
+  		@act2: offers(c) ≔ (center ↦ date)
+  	end
+  	
+  	event RejectAndAbort
+  	any c where
+  		@grd1: c ∈ citizens
+  		@grd2: c ∈ loggedin
+  		@grd3: c ∈ booking
+  		@grd4: ∀ a · a ∈ availibleAppointments ∧ (c ↦ a) ∉ offers ⇒ (c ↦ a) ∈ rejected
+  	then
+  		@act0: rejected ≔ {c} ⩤ rejected
+  		@act1: booking ≔ booking ∖ {c}
+  		@act2: offers ≔ {c} ⩤ offers
+  	end
+
+	//Aborts a booking event
+  	event AbortBooking
+  	any c where
+  		@grd1: c ∈ citizens
+  		@grd2: c ∈ loggedin
+  		@grd3: c ∈ booking
+  	then
+  		@act1: booking ≔ booking ∖ {c}
+  		@act2: offers ≔ {c} ⩤ offers
+  		@act3: rejected ≔ {c} ⩤ rejected
+  	end
+
+	//changes a booking
+  	event StartRebooking
+  	any c center date oldDate oldCenter currentDate where
+  		@grd1: c ∈ citizens
+		@grd2: c ∈ loggedin
+		@grd3: center ∈ centers
+		@grd4: date ∈ DATE
+		@grd5: oldDate ∈ DATE
+		@grd6: (c ↦ oldDate) ∈ dom(bookedAppointments) 
+		@grd7: c ∉ booking
+		@grd8: c ∈ dom(appointments)
+		@grd9: (center ↦ date) ∈ availibleAppointments
+		@grd10: (center ↦ date) ∉ ran(offers)
+		@grd11: (c ↦ date) ∈ appointments
+		@grd12: ((c ↦ date) ↦ center) ∉ bookedAppointments
+		@grd13: oldCenter ∈ centers
+		@grd14: oldCenter = bookedAppointments(c ↦ oldDate)
+		@grd15: currentDate ≠ oldDate
+	then
+		@act1: appointments ≔ appointments ∖ {c ↦ oldDate}
+		@act2: bookedAppointments ≔ {c ↦ oldDate} ⩤ bookedAppointments
+		@act3: booking ≔ booking ∪ {c}
+		@act4: offers ≔ offers ∪ {c ↦ (center ↦ date)}
+		@act5: availibleAppointments ≔ availibleAppointments ∪ {oldCenter ↦ oldDate}
+  	end
+end

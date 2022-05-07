@@ -1,0 +1,10 @@
+context c1
+sets
+	LOCATION
+	DATE
+	BRAND
+constants
+	batchNo
+axioms
+	@batch-no: batchNo ⊆ ℕ
+end

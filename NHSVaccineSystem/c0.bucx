@@ -1,0 +1,11 @@
+context c0
+sets
+	USER
+	PASSWORDS
+constants
+	root
+	rootPassword
+axioms
+	@typeof-root: root ∈ USER
+	@typeof-root-password: rootPassword ∈ PASSWORDS
+end

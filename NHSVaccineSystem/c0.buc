@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_39ITgM3uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="USER"/>
+    <org.eventb.core.carrierSet name="_39ITgc3uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="PASSWORDS"/>
+    <org.eventb.core.constant name="_39ITgs3uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="root"/>
+    <org.eventb.core.constant name="_39ITg83uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.identifier="rootPassword"/>
+    <org.eventb.core.axiom name="_39IThM3uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.label="typeof-root" org.eventb.core.predicate="root ∈ USER"/>
+    <org.eventb.core.axiom name="_39I6kM3uEeyULpBfgIBIxg" org.eventb.core.generated="false" org.eventb.core.label="typeof-root-password" org.eventb.core.predicate="rootPassword ∈ PASSWORDS"/>
+</org.eventb.core.contextFile>

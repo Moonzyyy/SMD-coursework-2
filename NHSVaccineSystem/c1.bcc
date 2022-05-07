@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="batch-no" org.eventb.core.predicate="batchNo⊆ℕ" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#_IKmntM3vEeyULpBfgIBIxg" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scCarrierSet name="LOCATION" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.carrierSet#_IKmnsM3vEeyULpBfgIBIxg" org.eventb.core.type="ℙ(LOCATION)"/>
+    <org.eventb.core.scCarrierSet name="BRAND" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.carrierSet#_IKmnss3vEeyULpBfgIBIxg" org.eventb.core.type="ℙ(BRAND)"/>
+    <org.eventb.core.scConstant name="batchNo" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#_IKmns83vEeyULpBfgIBIxg" org.eventb.core.type="ℙ(ℤ)"/>
+    <org.eventb.core.scCarrierSet name="DATE" org.eventb.core.source="/NHSVaccineSystem/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.carrierSet#_IKmnsc3vEeyULpBfgIBIxg" org.eventb.core.type="ℙ(DATE)"/>
+</org.eventb.core.scContextFile>

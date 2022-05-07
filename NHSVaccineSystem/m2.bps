@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="INITIALISATION/inv25/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv26/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RegisterCitizen/inv26/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateVaccineStock/inv25/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateCertificate/inv25/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="UpdateCertificate/inv26/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateCertificate/bookedAppointments/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateCertificate/vaccineStock/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateCertificate/appointments/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ViewDetails/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ViewDetails/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ViewBooking/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ViewBooking/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
